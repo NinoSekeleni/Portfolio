@@ -1,0 +1,1450 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nino Sekeleni Portfolio</title>
+<meta name="description" content="Nino Sekeleni is a creative director, art director and creative strategist in Johannesburg who brings AI into every stage of the creative process, with work for Visa, Cricket South Africa, Lions Cricket, FNB and Deloitte Digital.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nino Sekeleni">
+<meta property="og:title" content="Nino Sekeleni, Creative Director">
+<meta property="og:description" content="Creative director, art director and creative strategist in Johannesburg, working with AI across the creative process. Work for Visa, Cricket South Africa, Lions Cricket, FNB and Deloitte Digital.">
+<meta property="og:url" content="https://ninosekeleni.github.io/portfolio/">
+<meta property="og:image" content="https://ninosekeleni.github.io/portfolio/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nino Sekeleni, Creative Director, Art Director and Strategist">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nino Sekeleni, Creative Director">
+<meta name="twitter:description" content="Creative director, art director and creative strategist in Johannesburg.">
+<meta name="twitter:image" content="https://ninosekeleni.github.io/portfolio/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Hanken+Grotesk:ital,wght@0,300..700;1,400&display=swap">
+<style>
+/* Layout concept: a match-day programme. A black cover with the name set huge,
+   then each project as a spread: title and facts on the left, the story on the right,
+   the work running full width underneath. The about and CV pages switch to paper,
+   like the body of Nino's CV. */
+:root{
+  --ink:#0e0e0c;          /* page black, a touch warm */
+  --ink-2:#181815;        /* raised black for panels */
+  --paper:#ebe7e0;        /* CV paper */
+  --paper-2:#dfdad1;
+  --gold:#e6b26d;         /* the gold from Nino's CV icons */
+  --on-ink:#efece6;
+  --on-ink-mute:#9a968d;
+  --on-paper:#161613;
+  --on-paper-mute:#5f5b53;
+  --line-ink:rgba(239,236,230,.14);
+  --line-paper:rgba(22,22,19,.16);
+  --lions-gold:#f9ba34;
+  --lions-navy:#232a5c;
+
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+
+  --gutter:clamp(16px,4vw,56px);
+  --max:1440px;
+  --step--1:clamp(.8rem,.77rem + .15vw,.9rem);
+  --step-0:clamp(1rem,.96rem + .2vw,1.125rem);
+  --step-1:clamp(1.2rem,1.1rem + .5vw,1.5rem);
+  --step-2:clamp(1.6rem,1.3rem + 1.4vw,2.6rem);
+  --step-3:clamp(2.4rem,1.6rem + 4vw,5.6rem);
+  --step-4:clamp(3.6rem,1.4rem + 11vw,12.5rem);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--ink);color:var(--on-ink);font-family:var(--body);font-size:var(--step-0);line-height:1.6;margin:0;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-family:var(--display);font-weight:700;margin:0;text-wrap:balance}
+p{margin:0}
+.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--ink);padding:.6rem 1rem;z-index:100}
+.skip:focus{left:1rem;top:1rem}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(14,14,12,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line-ink)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:60px}
+.mark{font-family:var(--display);font-size:1.05rem;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.mark b{font-weight:700}.mark span{font-weight:300}
+.nav{display:flex;align-items:center;gap:clamp(.9rem,2.4vw,2rem);font-size:var(--step--1)}
+.nav a{text-decoration:none;color:var(--on-ink-mute);transition:color .2s}
+.nav a:hover{color:var(--on-ink)}
+.nav .clock{color:var(--on-ink-mute);font-variant-numeric:tabular-nums;padding-left:clamp(.9rem,2.4vw,2rem);border-left:1px solid var(--line-ink);white-space:nowrap}
+.nav .cta{color:var(--ink);background:var(--gold);padding:.45rem .95rem;border-radius:999px;font-weight:600}
+.nav .cta:hover{color:var(--ink);background:var(--on-ink)}
+@media (max-width:760px){.nav .opt,.nav .clock{display:none}}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(2.5rem,6vw,5rem) clamp(2.5rem,5vw,4rem)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:end}
+.lockup{font-family:var(--display);font-size:var(--step-4);line-height:.84;letter-spacing:-.035em;margin:0}
+.lockup .l1{display:block;font-weight:220;font-variation-settings:"wdth" 100}
+.lockup .l2{display:block;font-weight:780;font-variation-settings:"wdth" 78;letter-spacing:-.03em}
+.lockup .ln{display:block;overflow:hidden;padding-bottom:.04em}
+.lockup .ln>span{display:block;animation:rise .9s cubic-bezier(.2,.7,.1,1) both}
+.lockup .ln:nth-child(2)>span{animation-delay:.08s}
+@keyframes rise{from{transform:translateY(40%)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){.lockup .ln>span{animation:none}}
+.roles{display:flex;flex-wrap:wrap;gap:.2rem .75rem;margin-top:1.4rem;font-size:clamp(1rem,.9rem + .45vw,1.3rem);font-weight:400}
+.roles li{list-style:none;display:flex;align-items:center;gap:.75rem;white-space:nowrap}
+.roles li:not(:last-child)::after{content:"";width:.38em;height:.38em;border-radius:50%;background:var(--gold)}
+.roles{padding:0}
+.thesis{margin-top:1.6rem;max-width:40ch;font-size:var(--step-1);line-height:1.45;color:var(--on-ink);font-weight:300}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.8rem 1.3rem;border-radius:999px;font-weight:600;font-size:var(--step--1);text-decoration:none;border:1px solid var(--on-ink);transition:background .2s,color .2s}
+.btn.solid{background:var(--on-ink);color:var(--ink)}
+.btn.solid:hover{background:var(--gold);border-color:var(--gold)}
+.btn.ghost:hover{background:var(--on-ink);color:var(--ink)}
+.btn svg{width:1em;height:1em}
+.portrait{position:relative;border-radius:4px;overflow:hidden;background:var(--ink-2);aspect-ratio:1200/1350}
+.portrait img{width:100%;height:100%;object-fit:cover;filter:contrast(1.04)}
+.portrait figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:1rem;padding:1rem 1.1rem;font-size:var(--step--1);background:linear-gradient(transparent,rgba(0,0,0,.72));color:var(--on-ink)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}.portrait{max-width:520px;aspect-ratio:4/4.2}}
+
+/* ---------- clients ---------- */
+.clients{border-block:1px solid var(--line-ink);overflow:hidden;padding-block:1.1rem}
+.track{display:flex;width:max-content;animation:slide 48s linear infinite}
+.track ul{display:flex;gap:3rem;padding:0 1.5rem 0 1.5rem;margin:0;list-style:none}
+.track li{font-family:var(--display);font-size:var(--step-1);font-weight:500;white-space:nowrap;color:var(--on-ink-mute);display:flex;align-items:center;gap:3rem}
+.track li::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:.8}
+@keyframes slide{to{transform:translateX(-50%)}}
+.clients:hover .track{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto}.track ul[aria-hidden]{display:none}.track ul{flex-wrap:wrap;gap:.6rem 2.4rem}}
+
+/* ---------- section heads ---------- */
+.sec{padding-block:clamp(4rem,9vw,8rem)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.5rem 4rem;align-items:end;margin-bottom:clamp(2rem,4vw,3.5rem)}
+.sec-head h2{font-size:var(--step-3);line-height:.92;letter-spacing:-.03em;font-variation-settings:"wdth" 82}
+.sec-head p{max-width:52ch;color:var(--on-ink-mute)}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr}}
+
+/* ---------- index ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.filters button{font:inherit;font-size:var(--step--1);color:var(--on-ink-mute);background:none;border:1px solid var(--line-ink);border-radius:999px;padding:.45rem 1rem;cursor:pointer;transition:all .2s}
+.filters button:hover{color:var(--on-ink);border-color:var(--on-ink-mute)}
+.filters button[aria-pressed="true"]{background:var(--on-ink);color:var(--ink);border-color:var(--on-ink)}
+.filters .count{font-variant-numeric:tabular-nums;opacity:.6;margin-left:.35rem}
+.index{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-ink)}
+.index a{display:grid;grid-template-columns:96px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1fr) 24px;gap:1.5rem;align-items:center;padding-block:.9rem;border-bottom:1px solid var(--line-ink);text-decoration:none;transition:background .25s,padding .25s}
+.index a:hover{background:var(--ink-2)}
+.index .th{width:96px;aspect-ratio:4/3;border-radius:3px;overflow:hidden;background:var(--ink-2)}
+.index .th img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+
+.index .t{font-family:var(--display);font-size:var(--step-1);font-weight:600;letter-spacing:-.01em;line-height:1.15}
+.index .c,.index .d{color:var(--on-ink-mute);font-size:var(--step--1)}
+.index .ar{color:var(--gold);transition:transform .25s}
+.index a:hover .ar{transform:translateX(4px)}
+@media (max-width:760px){
+  .index a{grid-template-columns:72px minmax(0,1fr) 20px;gap:1rem}
+  .index .th{width:72px}
+  .index .d{display:none}
+  .index .c{grid-column:2;grid-row:2;margin-top:-.5rem}
+  .index .t{grid-column:2;grid-row:1}
+  .index .th{grid-row:1/3}
+  .index .ar{grid-row:1/3;grid-column:3}
+}
+
+/* ---------- case studies ---------- */
+.case{padding-block:clamp(4rem,8vw,7rem);border-top:1px solid var(--line-ink);scroll-margin-top:60px}
+.case-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:2rem clamp(2rem,5vw,5rem);margin-bottom:clamp(2rem,4vw,3.5rem)}
+.case-title{font-size:var(--step-3);line-height:.9;letter-spacing:-.035em;font-variation-settings:"wdth" 80;font-weight:720}
+.case-client{display:block;font-family:var(--body);font-size:var(--step-1);font-weight:400;letter-spacing:0;color:var(--gold);margin-bottom:.9rem;font-variation-settings:normal}
+.facts{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.45rem 1.4rem;margin:1.8rem 0 0;font-size:var(--step--1)}
+.facts dt{color:var(--on-ink-mute)}
+.facts dd{margin:0}
+.story{display:flex;flex-direction:column;gap:1.1rem;max-width:62ch;padding-top:.4rem}
+.story p:first-child{font-size:var(--step-1);line-height:1.5;font-weight:300}
+.story p{color:var(--on-ink)}
+.story p+p{color:#c9c5bd}
+@media (max-width:860px){.case-head{grid-template-columns:1fr}}
+
+.media{display:grid;gap:clamp(8px,1.2vw,16px)}
+.media figure{margin:0;overflow:hidden;border-radius:3px;background:var(--ink-2);min-width:0}
+.media img{width:100%;height:100%;object-fit:cover}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.span2{grid-column:span 2}.full{grid-column:1/-1}
+@media (max-width:760px){.g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.g2.stack{grid-template-columns:1fr}.span2{grid-column:1/-1}}
+
+/* Lions */
+.lions{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.lions .kit{background:var(--lions-gold);display:flex;align-items:flex-end;justify-content:center;gap:2%;padding:6% 6% 0}
+.lions .kit img{width:30%;height:auto;object-fit:contain}
+.lions .themes{background:var(--lions-navy);color:#fff;padding:clamp(1.4rem,3vw,2.4rem);display:flex;flex-direction:column;gap:1.3rem;justify-content:center}
+.themes h4{font-family:var(--display);font-size:var(--step-1);margin:0 0 .3rem;font-weight:700;letter-spacing:-.01em}
+.themes h4 span{color:var(--lions-gold);font-variant-numeric:tabular-nums;font-weight:500;margin-right:.6rem}
+.themes p{font-size:var(--step--1);color:rgba(255,255,255,.78);line-height:1.5}
+.lions .tl{background:#fff;padding:clamp(1rem,3vw,2.5rem) clamp(1rem,6vw,6rem)}
+.lions .tl img{height:auto;object-fit:contain}
+@media (max-width:860px){.lions{grid-template-columns:1fr}}
+
+/* film links */
+.film{position:relative;display:block;text-decoration:none;color:var(--on-ink)}
+.film .play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;background:rgba(0,0,0,.22);transition:background .3s}
+.film .play i{width:clamp(64px,8vw,96px);aspect-ratio:1;border-radius:50%;border:2px solid #fff;display:grid;place-items:center;transition:transform .3s,background .3s}
+.film .play i::before{content:"";margin-left:6px;border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}
+.film .play b{font-size:var(--step--1);font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:rgba(0,0,0,.45);padding:.3rem .7rem;border-radius:999px}
+.film:hover .play{background:rgba(0,0,0,.4)}
+.film:hover .play i{background:var(--gold);border-color:var(--gold)}
+.film:hover .play i::before{border-left-color:var(--ink)}
+
+.ux figure{background:#1d1d1b}
+.ux .tall img{object-fit:contain}
+
+/* ---------- paper sections ---------- */
+.paper{background:var(--paper);color:var(--on-paper)}
+.paper .sec-head p{color:var(--on-paper-mute)}
+.about-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2rem,5vw,5rem)}
+.about-grid figure{margin:0;border-radius:3px;overflow:hidden;align-self:start}
+.about-copy{display:flex;flex-direction:column;gap:1.2rem;max-width:62ch}
+.about-copy p:first-child{font-size:var(--step-2);line-height:1.2;font-family:var(--display);font-weight:400;letter-spacing:-.015em;font-variation-settings:"wdth" 92}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}.about-grid figure{position:static;max-width:420px}}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line-paper);margin-top:clamp(3rem,6vw,5rem)}
+.stats div{padding:1.6rem 1.4rem 0 0;display:flex;flex-direction:column;gap:.5rem}
+.stats div+div{padding-left:1.4rem;border-left:1px solid var(--line-paper)}
+.stats b{font-family:var(--display);font-size:var(--step-3);line-height:.9;font-weight:700;letter-spacing:-.04em;font-variation-settings:"wdth" 80;font-variant-numeric:tabular-nums}
+.stats span{font-size:var(--step--1);color:var(--on-paper-mute);max-width:26ch}
+@media (max-width:860px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stats div:nth-child(3){padding-left:0;border-left:0}.stats div{padding-bottom:1.6rem}}
+.caps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2rem;margin-top:clamp(3rem,6vw,5rem)}
+.caps h3{font-size:var(--step-1);font-weight:650;margin-bottom:.8rem;letter-spacing:-.01em}
+.caps ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.35rem;font-size:var(--step--1);color:var(--on-paper-mute)}
+@media (max-width:960px){.caps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.caps{grid-template-columns:1fr}}
+
+.cv{border-top:1px solid var(--line-paper)}
+.cv .sec-head h2{font-variation-settings:"wdth" 82}
+.roles-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-paper)}
+.roles-list li{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,4fr) minmax(0,5fr);gap:1rem 2rem;padding-block:1.5rem;border-bottom:1px solid var(--line-paper)}
+.roles-list .when{font-size:var(--step--1);color:var(--on-paper-mute);font-variant-numeric:tabular-nums;padding-top:.3rem}
+.roles-list h3{font-size:var(--step-1);font-weight:650;letter-spacing:-.01em;line-height:1.25}
+.roles-list .org{display:block;font-family:var(--body);font-size:var(--step--1);font-weight:500;color:var(--on-paper-mute);margin-top:.2rem}
+.roles-list p{font-size:var(--step--1);color:#3b3832;max-width:60ch}
+@media (max-width:760px){.roles-list li{grid-template-columns:1fr;gap:.4rem}}
+.extra{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;margin-top:clamp(2.5rem,5vw,4rem)}
+.extra h3{font-size:var(--step-1);font-weight:650;margin-bottom:.7rem}
+.extra p,.extra li{font-size:var(--step--1);color:#3b3832}
+.extra ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.extra strong{color:var(--on-paper);font-weight:600}
+@media (max-width:860px){.extra{grid-template-columns:1fr}}
+
+/* ---------- contact ---------- */
+.contact{padding-block:clamp(5rem,11vw,10rem) clamp(2rem,4vw,3rem)}
+.contact h2{font-size:var(--step-4);line-height:.86;letter-spacing:-.04em;font-weight:220;font-variation-settings:"wdth" 100}
+.contact h2 b{font-weight:780;font-variation-settings:"wdth" 78;display:block}
+.contact-row{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 2rem;margin-top:clamp(2rem,4vw,3rem)}
+.email{font-family:var(--display);font-size:var(--step-2);font-weight:500;letter-spacing:-.02em;user-select:all;word-break:break-all}
+.copy{font:inherit;font-size:var(--step--1);font-weight:600;background:none;color:var(--on-ink);border:1px solid var(--line-ink);border-radius:999px;padding:.55rem 1.1rem;cursor:pointer}
+.copy:hover{border-color:var(--gold);color:var(--gold)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;margin-top:clamp(4rem,8vw,7rem);padding-top:1.4rem;border-top:1px solid var(--line-ink);font-size:var(--step--1);color:var(--on-ink-mute)}
+.foot a{text-decoration:none}.foot a:hover{color:var(--on-ink)}
+
+/* ---------- v2 additions ---------- */
+.progress{position:fixed;left:0;top:0;height:2px;width:100%;background:var(--gold);transform-origin:0 50%;transform:scaleX(0);z-index:60;pointer-events:none}
+
+
+/* at a glance */
+.glance{border-top:1px solid var(--line-ink);padding-block:clamp(2rem,4vw,3rem)}
+.glance-grid{display:grid;grid-template-columns:120px repeat(4,minmax(0,1fr));gap:1.5rem 2rem;align-items:start}
+.glance-grid img{width:120px;height:120px;object-fit:cover;border-radius:50%;filter:grayscale(1)}
+.glance h2{font-family:var(--body);font-size:var(--step--1);font-weight:600;color:var(--gold);margin-bottom:.45rem;letter-spacing:.02em}
+.glance p{font-size:var(--step--1);color:#cfcbc3;line-height:1.55}
+.glance p strong{color:var(--on-ink);font-weight:600}
+.glance-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem;padding-left:calc(120px + 2rem)}
+@media (max-width:1000px){.glance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.glance-grid img{grid-column:1/-1}.glance-actions{padding-left:0}}
+@media (max-width:520px){.glance-grid{grid-template-columns:1fr}}
+
+/* results strip */
+.results{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));border-block:1px solid var(--line-ink);margin-bottom:clamp(2rem,4vw,3rem)}
+.results div{padding:1.3rem 1.2rem 1.3rem 0;display:flex;flex-direction:column;gap:.35rem}
+.results div+div{padding-left:1.2rem;border-left:1px solid var(--line-ink)}
+.results b{font-family:var(--display);font-size:var(--step-2);line-height:1;font-weight:700;letter-spacing:-.03em;font-variation-settings:"wdth" 82;color:var(--on-ink);font-variant-numeric:tabular-nums}
+.results b.txt{font-size:var(--step-1);letter-spacing:-.01em;line-height:1.15}
+.results div>span{font-size:var(--step--1);color:var(--on-ink-mute);max-width:24ch}
+@media (max-width:620px){.results{grid-template-columns:1fr 1fr}.results div:nth-child(odd){padding-left:0;border-left:0}.results div:nth-child(n+3){border-top:1px solid var(--line-ink)}}
+
+/* aspect helpers */
+.a45{aspect-ratio:4/5}.a11{aspect-ratio:1/1}.a169{aspect-ratio:16/9}
+.contain img,.contain video{object-fit:contain}
+.bg-navy{background:var(--lions-navy)!important}.bg-gold{background:var(--lions-gold)!important}.bg-visa{background:#172bc4!important}
+.media video{width:100%;height:100%;object-fit:cover;display:block}
+.subhead{font-family:var(--body);font-size:var(--step-0);font-weight:600;color:var(--on-ink);margin:clamp(2rem,4vw,3rem) 0 1rem;display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+.subhead small{font-weight:400;font-size:var(--step--1);color:var(--on-ink-mute)}
+
+/* match-day feed */
+.feed{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:var(--on-ink-mute) transparent;-webkit-overflow-scrolling:touch}
+.feed figure{flex:0 0 clamp(170px,19vw,236px);aspect-ratio:276/333;margin:0;border-radius:3px;overflow:hidden;scroll-snap-align:start;background:var(--ink-2)}
+.feed img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+
+
+
+/* AI projects */
+.ai{border-top:1px solid var(--line-ink)}
+.ai-card{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:2rem clamp(2rem,5vw,5rem);padding-block:clamp(2.5rem,5vw,4rem);border-bottom:1px solid var(--line-ink)}
+.ai-card h3{font-size:var(--step-3);line-height:.9;letter-spacing:-.035em;font-variation-settings:"wdth" 80;font-weight:720}
+.ai-card .tag{display:inline-flex;align-items:center;gap:.5rem;font-size:var(--step--1);font-weight:600;color:var(--gold);margin-bottom:.9rem}
+.ai-card .tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.ai-card .story{padding-top:0}
+.ai-stats{display:flex;flex-wrap:wrap;gap:1.5rem 2.5rem;margin-top:1.6rem}
+.ai-stats div{display:flex;flex-direction:column}
+.ai-stats b{font-family:var(--display);font-size:var(--step-2);font-weight:700;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1}
+.ai-stats span{font-size:var(--step--1);color:var(--on-ink-mute);margin-top:.3rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem}
+.chips span{font-size:var(--step--1);border:1px solid var(--line-ink);border-radius:999px;padding:.3rem .8rem;color:#cfcbc3}
+.ai-media{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,2fr) minmax(0,2fr) minmax(0,1fr);gap:clamp(8px,1.2vw,16px)}
+.ai-media figure{margin:0;border-radius:3px;overflow:hidden;background:var(--ink-2);min-width:0}
+.ai-media img{width:100%;height:100%;object-fit:cover}
+.ai-media .wide{grid-column:1/3}
+.ai-media .tallm{grid-row:span 2}
+@media (max-width:860px){.ai-card{grid-template-columns:1fr}.ai-media{grid-template-columns:1fr 1fr}.ai-media .wide{grid-column:1/-1}.ai-media .tallm{grid-row:auto;display:none}}
+.placeholder{border:1.5px dashed rgba(230,178,109,.55);border-radius:6px;padding:clamp(1.4rem,3vw,2.2rem);color:#cfcbc3;display:flex;flex-direction:column;gap:.7rem;background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(230,178,109,.05) 14px 28px)}
+.placeholder b{color:var(--gold);font-weight:600}
+
+
+/* hire pill */
+.hire{position:fixed;right:clamp(12px,2vw,24px);bottom:calc(clamp(12px,2vw,24px) + env(safe-area-inset-bottom,0px));z-index:55;display:inline-flex;align-items:center;gap:.55rem;background:var(--gold);color:var(--ink);font-weight:700;font-size:var(--step--1);text-decoration:none;padding:.75rem 1.15rem;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.35);transform:translateY(160%);transition:transform .5s cubic-bezier(.2,.7,.1,1),background .2s}
+.hire.show{transform:none}
+.hire:hover{background:var(--on-ink)}
+.hire::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 0 rgba(14,14,12,.5);animation:ping 2.4s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(14,14,12,.45)}70%{box-shadow:0 0 0 8px rgba(14,14,12,0)}100%{box-shadow:0 0 0 0 rgba(14,14,12,0)}}
+@media (prefers-reduced-motion:reduce){.hire::before{animation:none}}
+
+/* ---------- v3: day/night, ambient, toolkit ---------- */
+:root{--text-2:#c9c5bd;--text-3:#cfcbc3;--paper-text:#3b3832;--bar:rgba(14,14,12,.82);--glow:rgba(230,178,109,.16);--glow-2:rgba(180,150,255,.07);--grain-o:.075}
+:root[data-mode="day"]{
+  --ink:#f2eee7;--ink-2:#e6e0d6;--on-ink:#161613;--on-ink-mute:#6b665d;--line-ink:rgba(22,22,19,.14);
+  --paper:#151513;--paper-2:#1f1f1c;--on-paper:#efece6;--on-paper-mute:#9a968d;--line-paper:rgba(239,236,230,.14);
+  --gold:#a8691e;--text-2:#3d3a34;--text-3:#3d3a34;--paper-text:#c9c5bd;--bar:rgba(242,238,231,.84);
+  --glow:rgba(214,150,62,.20);--glow-2:rgba(120,160,220,.10);--grain-o:.06;color-scheme:light}
+body,.paper,.top,.results,.index a,.tool-group{transition:background-color .6s ease,color .6s ease,border-color .6s ease}
+.top{background:var(--bar)}
+.story p+p{color:var(--text-2)}
+.glance p,.chips span,.placeholder{color:var(--text-3)}
+.roles-list p,.extra p,.extra li{color:var(--paper-text)}
+.portrait figcaption{color:#efece6}
+main,footer{position:relative;z-index:1}
+.glance-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.glance-actions{padding-left:0}
+@media (max-width:1000px){.glance-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.glance-grid{grid-template-columns:1fr}}
+
+/* ambient glow (static) */
+.ambient{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(60vmax 60vmax at 0% 0%,var(--glow),transparent 70%)}
+/* mode toggle */
+.mode{display:inline-flex;align-items:center;gap:.45rem;font:inherit;font-size:var(--step--1);color:var(--on-ink-mute);background:none;border:1px solid var(--line-ink);border-radius:999px;padding:.4rem .75rem;cursor:pointer;transition:color .2s,border-color .2s}
+.mode:hover{color:var(--on-ink);border-color:var(--on-ink-mute)}
+.mode svg{width:15px;height:15px}
+.mode .sun{display:none}
+:root[data-mode="day"] .mode .sun{display:block}
+:root[data-mode="day"] .mode .moon{display:none}
+@media (max-width:520px){.mode span{display:none}}
+
+/* quote */
+.quote{margin:clamp(2rem,4vw,3rem) 0 0;padding:clamp(1.4rem,3vw,2.4rem) 0 0;border-top:1px solid var(--line-ink);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:1rem 4rem}
+.quote blockquote{margin:0;font-family:var(--display);font-size:var(--step-2);line-height:1.2;letter-spacing:-.015em;font-weight:400;font-variation-settings:"wdth" 92;grid-column:2}
+.quote figcaption{grid-column:2;font-size:var(--step--1);color:var(--on-ink-mute)}
+.quote figcaption b{color:var(--on-ink);font-weight:600}
+@media (max-width:760px){.quote{grid-template-columns:1fr}.quote blockquote,.quote figcaption{grid-column:1}}
+
+/* poster rail */
+.feed.posters figure{flex-basis:clamp(190px,22vw,280px);aspect-ratio:900/1273}
+
+
+/* toolkit as type */
+.toolkit{margin:clamp(2rem,4vw,3rem) 0 0;border-top:1px solid var(--line-paper)}
+.toolkit>div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:.6rem 2rem;padding-block:1.15rem;border-bottom:1px solid var(--line-paper);align-items:baseline}
+.toolkit dt{font-size:var(--step--1);font-weight:600;color:var(--on-paper-mute)}
+.toolkit dd{margin:0}
+.toolkit ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.2rem 0}
+.toolkit li{font-family:var(--display);font-size:var(--step-1);font-weight:500;letter-spacing:-.01em;color:var(--on-paper);display:flex;align-items:center}
+.toolkit li+li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);margin:0 .8rem;opacity:.8}
+@media (max-width:760px){.toolkit>div{grid-template-columns:1fr}}
+
+/* ---------- v4: cursor, mouse glow, back to top ---------- */
+.totop{position:fixed;right:clamp(12px,2vw,24px);bottom:calc(clamp(12px,2vw,24px) + 58px + env(safe-area-inset-bottom,0px));z-index:55;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--bar);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--on-ink);border:1px solid var(--line-ink);cursor:pointer;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .35s,transform .35s,border-color .2s}
+.totop.show{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{border-color:var(--gold);color:var(--gold)}
+.totop svg{width:18px;height:18px}
+
+/* ---------- v6: fixed framing, works the same in Safari, Chrome and Firefox ---------- */
+.media{align-items:start}
+.media figure,.ai-media figure,.feed figure{position:relative;min-height:0}
+.media figure>img,.media figure>video,.ai-media figure>img{display:block;width:100%;height:auto}
+.media figure.a45>img,.media figure.a11>img,.media figure.a169>img,.media figure[style*="aspect-ratio"]>img,
+.media figure.a45>video,.media figure.a11>video,.media figure.a169>video,.media figure[style*="aspect-ratio"]>video,
+.ai-media figure[style*="aspect-ratio"]>img,
+.ai-media figure.tallm>img,
+.feed figure>img{position:absolute;inset:0;width:100%;height:100%}
+.media figure.a45>a.film,.media figure.a11>a.film,.media figure.a169>a.film,.media figure[style*="aspect-ratio"]>a.film{position:absolute;inset:0;display:block}
+.media figure>a.film>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.media figure.contain>img,.media figure.contain>video{object-fit:contain}
+.ai-media{align-items:stretch}
+.ai-media figure.tallm{height:100%}
+.lions .kit img{position:static!important;height:auto!important}
+.lions .themes,.lions .kit{align-self:stretch}
+.media.lions{align-items:stretch}
+.ux .tall>img{object-fit:contain}
+
+.ai-caps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid var(--line-ink)}
+.ai-caps div{padding:1.4rem 1.4rem 1.5rem 0}
+.ai-caps div+div{padding-left:1.4rem;border-left:1px solid var(--line-ink)}
+.ai-caps h3{font-size:var(--step-1);font-weight:650;letter-spacing:-.01em;margin-bottom:.5rem}
+.ai-caps p{font-size:var(--step--1);color:var(--text-2);line-height:1.55}
+.ai-caps a{color:var(--gold)}
+@media (max-width:960px){.ai-caps{grid-template-columns:1fr 1fr}.ai-caps div:nth-child(3){padding-left:0;border-left:0}.ai-caps div:nth-child(n+3){border-top:1px solid var(--line-ink)}}
+@media (max-width:560px){.ai-caps{grid-template-columns:1fr}.ai-caps div{padding-left:0!important;border-left:0!important}.ai-caps div+div{border-top:1px solid var(--line-ink)}}
+
+/* hover zoom stays inside each frame */
+.media figure,.feed figure,.index .th,.process figure{overflow:hidden}
+.media figure>img,.media figure>a.film>img,.feed figure>img,.index .th img,.process figure img{transition:transform .9s cubic-bezier(.2,.7,.1,1)}
+@media (hover:hover){.media figure:hover>img,.media figure:hover>a.film>img,.feed figure:hover>img,.index a:hover .th img,.process a:hover figure img{transform:scale(1.045)}}
+.media figure.contain:hover>img,.lions .kit:hover img{transform:none}
+@media (prefers-reduced-motion:reduce){.media figure>img,.feed figure>img,.index .th img,.process figure img{transition:none;transform:none!important}}
+.credits{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.2fr);gap:1rem clamp(1.5rem,4vw,4rem);margin:0 0 clamp(2rem,4vw,3rem);padding-bottom:clamp(1.5rem,3vw,2.2rem);border-bottom:1px solid var(--line-ink)}
+.credits-h{margin:0;font-size:var(--step--1);font-weight:600;color:var(--gold);letter-spacing:.02em}
+.credits dl{margin:0;display:grid;grid-template-columns:minmax(9rem,auto) minmax(0,1fr);gap:.7rem 1.4rem;font-size:var(--step--1);line-height:1.55}
+.credits dt{color:var(--on-ink);font-weight:600}
+.credits dd{margin:0;color:var(--text-2);max-width:64ch}
+@media (max-width:760px){.credits{grid-template-columns:1fr}.credits dl{grid-template-columns:1fr;gap:.15rem}.credits dd{margin-bottom:.6rem}}
+/* proof band */
+.proof{padding-block:clamp(2.5rem,5vw,4rem);border-top:1px solid var(--line-ink)}
+.proof-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.6rem clamp(2rem,4vw,4rem);align-items:end;margin-bottom:clamp(1.6rem,3vw,2.4rem)}
+.proof-k{grid-column:1/-1;font-size:var(--step--1);font-weight:600;color:var(--gold);letter-spacing:.02em}
+.proof-head h2{font-size:var(--step-2);line-height:1;letter-spacing:-.025em;font-variation-settings:"wdth" 84}
+.proof-head p:last-child{color:var(--on-ink-mute);font-size:var(--step--1);max-width:56ch}
+.proof-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line-ink)}
+.proof-grid div{display:flex;flex-direction:column;gap:.45rem;padding:1.4rem 1.3rem 1.5rem 0;border-bottom:1px solid var(--line-ink)}
+.proof-grid div:not(:nth-child(4n+1)){padding-left:1.3rem;border-left:1px solid var(--line-ink)}
+.proof-grid b{font-family:var(--display);font-size:var(--step-3);line-height:.9;font-weight:700;letter-spacing:-.04em;font-variation-settings:"wdth" 80;font-variant-numeric:tabular-nums;color:var(--on-ink)}
+.proof-grid div:nth-child(-n+4) b{color:var(--gold)}
+.proof-grid span{font-size:var(--step--1);color:var(--text-2);line-height:1.5;max-width:30ch}
+.proof-grid i{font-style:normal;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--on-ink-mute);margin-top:auto;padding-top:.4rem}
+@media (max-width:960px){.proof-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.proof-grid div:not(:nth-child(4n+1)){padding-left:0;border-left:0}.proof-grid div:nth-child(even){padding-left:1.3rem;border-left:1px solid var(--line-ink)}}
+@media (max-width:760px){.proof-head{grid-template-columns:1fr}}
+@media (max-width:440px){.proof-grid{grid-template-columns:1fr}.proof-grid div:nth-child(even){padding-left:0;border-left:0}}
+/* case navigation */
+.case{scroll-margin-top:112px}
+.rail{position:absolute;left:0;right:0;top:100%;background:var(--bar);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line-ink);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .3s cubic-bezier(.2,.7,.1,1),visibility 0s .3s}
+.top.in-cases .rail{opacity:1;visibility:visible;transform:none;transition:opacity .25s,transform .3s cubic-bezier(.2,.7,.1,1)}
+.rail-in{display:flex;align-items:center;gap:.75rem;padding-block:.45rem}
+.top .rail .wrap{height:auto;justify-content:flex-start}
+.rail-all{flex:none;display:inline-flex;align-items:center;gap:.45rem;font:inherit;font-size:var(--step--1);font-weight:600;color:var(--ink);background:var(--gold);border:0;border-radius:999px;padding:.4rem .85rem;cursor:pointer}
+.rail-all svg{width:12px;height:12px}
+.rail-all:hover{background:var(--on-ink)}
+.rail-tabs{position:relative;flex:1;min-width:0;display:flex;gap:.25rem;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12px,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(90deg,transparent,#000 12px,#000 calc(100% - 24px),transparent);padding-inline:8px}
+.rail-tabs::-webkit-scrollbar{display:none}
+.rail-tabs a{flex:none;display:inline-flex;align-items:baseline;gap:.35rem;font-size:var(--step--1);color:var(--on-ink-mute);text-decoration:none;padding:.35rem .7rem;border-radius:999px;white-space:nowrap;transition:color .2s,background .2s}
+.rail-tabs a span{font-size:.68rem;font-variant-numeric:tabular-nums;opacity:.7}
+.rail-tabs a:hover{color:var(--on-ink);background:var(--ink-2)}
+.rail-tabs a[aria-current="true"]{color:var(--ink);background:var(--on-ink)}
+.rail-tabs a[hidden]{display:none}
+.rail-step{flex:none;display:flex;gap:.3rem}
+.rail-step button{width:30px;height:30px;border-radius:50%;border:1px solid var(--line-ink);background:none;color:var(--on-ink);font:inherit;font-size:.95rem;line-height:1;cursor:pointer}
+.rail-step button:hover{border-color:var(--gold);color:var(--gold)}
+.rail-step button:disabled{opacity:.3;cursor:default}
+@media (max-width:620px){.rail-step{display:none}.rail-all{padding:.4rem .7rem}.rail-all span{display:none}}
+.worknav{position:fixed;inset:0;z-index:80;background:var(--ink);overflow-y:auto;overscroll-behavior:contain}
+.worknav[hidden]{display:none}
+.worknav-in{padding-block:clamp(1.2rem,3vw,2.4rem) 3rem}
+.worknav-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.4rem 1rem;align-items:start;margin-bottom:1.6rem;border-bottom:1px solid var(--line-ink);padding-bottom:1.2rem}
+.worknav-head h2{font-size:var(--step-3);line-height:.9;letter-spacing:-.035em;font-variation-settings:"wdth" 80}
+.worknav-head p{grid-column:1;color:var(--on-ink-mute);font-size:var(--step--1)}
+.worknav-x{grid-column:2;grid-row:1/3;width:46px;height:46px;border-radius:50%;border:1px solid var(--line-ink);background:none;color:var(--on-ink);font-size:1.6rem;line-height:1;cursor:pointer}
+.worknav-x:hover{border-color:var(--gold);color:var(--gold)}
+.worknav-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,1.4vw,18px)}
+.worknav-grid a{display:flex;flex-direction:column;gap:.45rem;text-decoration:none;color:var(--on-ink)}
+.worknav-grid .th{display:block;aspect-ratio:4/3;border-radius:3px;overflow:hidden;background:var(--ink-2);position:relative}
+.worknav-grid .th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.1,1)}
+.worknav-grid a:hover .th img{transform:scale(1.045)}
+.worknav-grid .n{font-size:.7rem;color:var(--gold);font-variant-numeric:tabular-nums}
+.worknav-grid .t{font-family:var(--display);font-size:var(--step-0);font-weight:600;line-height:1.2}
+.worknav-grid .c{font-size:var(--step--1);color:var(--on-ink-mute);margin-top:-.3rem}
+.worknav-grid li[hidden]{display:none}
+.worknav-grid a.is-current .th{outline:2px solid var(--gold);outline-offset:3px}
+@media (max-width:960px){.worknav-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.worknav-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+body.nav-open{overflow:hidden}
+.case-step{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;margin-top:clamp(2.5rem,5vw,4rem);padding-top:1.4rem;border-top:1px solid var(--line-ink);font-size:var(--step--1)}
+.case-step a,.case-step button{color:var(--on-ink-mute);text-decoration:none;background:none;border:0;font:inherit;cursor:pointer;padding:0}
+.case-step a:hover,.case-step button:hover{color:var(--gold)}
+.case-step .nx{text-align:right}
+.case-step b{display:block;color:var(--on-ink);font-family:var(--display);font-size:var(--step-1);font-weight:600;margin-top:.15rem}
+.case-step a:hover b{color:var(--gold)}
+.case-step .mid{border:1px solid var(--line-ink)!important;border-radius:999px;padding:.45rem .9rem!important}
+@media (max-width:620px){.case-step{grid-template-columns:1fr 1fr}.case-step .mid{grid-column:1/-1;grid-row:2;justify-self:center}}
+.index li.grp{list-style:none;padding:1.6rem 0 .6rem;border-bottom:1px solid var(--line-ink);font-size:var(--step--1);font-weight:600;color:var(--gold);letter-spacing:.02em}
+.index li.grp:first-child{padding-top:.4rem}
+.rail-grp{flex:none;align-self:center;font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);padding:0 .3rem 0 .9rem;white-space:nowrap}
+.rail-grp:first-child{padding-left:.2rem}
+.rail-grp[hidden]{display:none}
+.worknav-grid li.wn-grp{grid-column:1/-1;font-size:var(--step--1);font-weight:600;color:var(--gold);letter-spacing:.02em;padding-top:.8rem;border-top:1px solid var(--line-ink);margin-top:.4rem}
+.worknav-grid li.wn-grp:first-child{border-top:0;margin-top:0;padding-top:0}
+.process{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.6vw,22px)}
+.process .step{display:flex;flex-direction:column;gap:.4rem;text-decoration:none;color:var(--on-ink)}
+.process figure{margin:0 0 .5rem;border-radius:4px;aspect-ratio:16/10;position:relative;background:var(--ink-2);border:1px solid var(--line-ink)}
+.process figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.process .n{font-size:var(--step--1);color:var(--gold);font-variant-numeric:tabular-nums}
+.process b{font-family:var(--display);font-size:var(--step-1);font-weight:650}
+.process .d{font-size:var(--step--1);color:var(--text-2);line-height:1.5}
+.process .go{font-size:var(--step--1);font-weight:600;margin-top:.2rem}
+.process a:hover .go{color:var(--gold)}
+@media (max-width:860px){.process{grid-template-columns:1fr}}
+
+/* ---------- v14: each case study in its own brand colour ---------- */
+html:root[data-case="visa"],.index a[href="#visa"],.worknav-grid a[href="#visa"],.rail-tabs a[data-case="visa"]{--case-bg:#1a1f71;--case-bg2:#292e7b;--case-fg:#f5f5fb;--case-mute:#abaccc;--case-t2:#d2d3e5;--case-acc:#f7b600;--case-line:rgba(245,245,251,.2);--case-bar:rgba(26,31,113,.86);--case-scheme:dark}
+html:root[data-case="fnb"],.index a[href="#fnb"],.worknav-grid a[href="#fnb"],.rail-tabs a[data-case="fnb"]{--case-bg:#16b3b0;--case-bg2:#15a9a6;--case-fg:#04201f;--case-mute:#073a39;--case-t2:#073836;--case-acc:#00363a;--case-line:rgba(4,32,31,.2);--case-bar:rgba(22,179,176,.86);--case-scheme:light}
+html:root[data-case="lions"],.index a[href="#lions"],.worknav-grid a[href="#lions"],.rail-tabs a[data-case="lions"]{--case-bg:#f9ba34;--case-bg2:#e9af35;--case-fg:#141a45;--case-mute:#594a40;--case-t2:#393442;--case-acc:#8a2a12;--case-line:rgba(20,26,69,.2);--case-bar:rgba(249,186,52,.86);--case-scheme:light}
+html:root[data-case="woza"],.index a[href="#woza"],.worknav-grid a[href="#woza"],.rail-tabs a[data-case="woza"]{--case-bg:#006140;--case-bg2:#116c4d;--case-fg:#f3fbf6;--case-mute:#b9d6ca;--case-t2:#cce2d9;--case-acc:#ffd23f;--case-line:rgba(243,251,246,.2);--case-bar:rgba(0,97,64,.86);--case-scheme:dark}
+html:root[data-case="icc"],.index a[href="#icc"],.worknav-grid a[href="#icc"],.rail-tabs a[data-case="icc"]{--case-bg:#2a1a96;--case-bg2:#38299d;--case-fg:#f4f2ff;--case-mute:#afa9db;--case-t2:#d4cfee;--case-acc:#63e3b4;--case-line:rgba(244,242,255,.2);--case-bar:rgba(42,26,150,.86);--case-scheme:dark}
+html:root[data-case="ikigai"],.index a[href="#ikigai"],.worknav-grid a[href="#ikigai"],.rail-tabs a[data-case="ikigai"]{--case-bg:#1b3a2d;--case-bg2:#2a473a;--case-fg:#f3eee2;--case-mute:#aab1a4;--case-t2:#d0d1c5;--case-acc:#d8c79f;--case-line:rgba(243,238,226,.2);--case-bar:rgba(27,58,45,.86);--case-scheme:dark}
+html:root[data-case="deloitte"],.index a[href="#deloitte"],.worknav-grid a[href="#deloitte"],.rail-tabs a[data-case="deloitte"]{--case-bg:#86bc25;--case-bg2:#7db022;--case-fg:#0a1200;--case-mute:#2d420a;--case-t2:#1e2d06;--case-acc:#123f14;--case-line:rgba(10,18,0,.2);--case-bar:rgba(134,188,37,.86);--case-scheme:light}
+html:root[data-case="jifa"],.index a[href="#jifa"],.worknav-grid a[href="#jifa"],.rail-tabs a[data-case="jifa"]{--case-bg:#e6e2d1;--case-bg2:#d8d4c3;--case-fg:#1a140c;--case-mute:#5f5a4f;--case-t2:#3b352c;--case-acc:#7a5631;--case-line:rgba(26,20,12,.2);--case-bar:rgba(230,226,209,.86);--case-scheme:light}
+html:root[data-case="airfrance"],.index a[href="#airfrance"],.worknav-grid a[href="#airfrance"],.rail-tabs a[data-case="airfrance"]{--case-bg:#0b1d4c;--case-bg2:#1b2c58;--case-fg:#f2f4fa;--case-mute:#a3abbf;--case-t2:#cdd2de;--case-acc:#ff5a64;--case-line:rgba(242,244,250,.2);--case-bar:rgba(11,29,76,.86);--case-scheme:dark}
+html:root[data-case="hillcountry"],.index a[href="#hillcountry"],.worknav-grid a[href="#hillcountry"],.rail-tabs a[data-case="hillcountry"]{--case-bg:#efe4cf;--case-bg2:#e1d6c2;--case-fg:#2a1d10;--case-mute:#6d6151;--case-t2:#4a3d2f;--case-acc:#8a5426;--case-line:rgba(42,29,16,.2);--case-bar:rgba(239,228,207,.86);--case-scheme:light}
+html:root[data-case="harmony"],.index a[href="#harmony"],.worknav-grid a[href="#harmony"],.rail-tabs a[data-case="harmony"]{--case-bg:#7e3520;--case-bg2:#87422e;--case-fg:#fbf1e9;--case-mute:#d6b9ad;--case-t2:#e7d3c9;--case-acc:#f2c76b;--case-line:rgba(251,241,233,.2);--case-bar:rgba(126,53,32,.86);--case-scheme:dark}
+html:root[data-case="petra"],.index a[href="#petra"],.worknav-grid a[href="#petra"],.rail-tabs a[data-case="petra"]{--case-bg:#2e241b;--case-bg2:#3c3229;--case-fg:#f3ebe2;--case-mute:#b0a79e;--case-t2:#d3cbc2;--case-acc:#f0a43a;--case-line:rgba(243,235,226,.2);--case-bar:rgba(46,36,27,.86);--case-scheme:dark}
+html:root[data-case="migration"],.index a[href="#migration"],.worknav-grid a[href="#migration"],.rail-tabs a[data-case="migration"]{--case-bg:#ebe7e0;--case-bg2:#dcd8d2;--case-fg:#161613;--case-mute:#5e5d59;--case-t2:#383734;--case-acc:#161613;--case-line:rgba(22,22,19,.2);--case-bar:rgba(235,231,224,.86);--case-scheme:light}
+html:root[data-case]{--ink:var(--case-bg);--ink-2:var(--case-bg2);--on-ink:var(--case-fg);--on-ink-mute:var(--case-mute);--text-2:var(--case-t2);--text-3:var(--case-t2);--line-ink:var(--case-line);--gold:var(--case-acc);--bar:var(--case-bar);--glow:transparent;--glow-2:transparent;color-scheme:var(--case-scheme)}
+.case-title,.case-client,.story p,.facts dt,.facts dd,.credits dt,.credits dd,.credits-h,.results b,.results span,.subhead,.case-step a,.case-step button,.rail-tabs a,.top a,.mode{transition:color .6s ease,background-color .6s ease,border-color .6s ease}
+.index a{padding-inline:0;transition:background-color .35s ease,color .35s ease,padding .35s ease}
+.index .c::before{content:"";display:inline-block;width:.6em;height:.6em;border-radius:50%;background:var(--case-bg);box-shadow:0 0 0 1px var(--line-ink);margin-right:.55em;vertical-align:.02em}
+@media (hover:hover){.index a:hover{background:var(--case-bg);color:var(--case-fg);padding-inline:1rem}.index a:hover .c,.index a:hover .d{color:var(--case-mute)}.index a:hover .ar{color:var(--case-acc)}.index a:hover .c::before{box-shadow:0 0 0 1px var(--case-fg)}}
+.worknav-grid .c::before{content:"";display:inline-block;width:.55em;height:.55em;border-radius:50%;background:var(--case-bg);box-shadow:0 0 0 1px var(--line-ink);margin-right:.5em;vertical-align:.02em}
+.worknav-grid a:hover .th{outline:3px solid var(--case-bg);outline-offset:3px}
+.rail-tabs a:not([aria-current="true"]):hover{background:var(--case-bg);color:var(--case-fg)}
+</style>
+</head>
+<body>
+
+
+<a class="skip" href="#work">Skip to the work</a>
+<div class="ambient" aria-hidden="true"></div>
+<button class="totop" id="totop" type="button" aria-label="Back to top"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 14V2M3 7l5-5 5 5"/></svg></button>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<a class="hire" id="hire" href="#contact">Get in Contact</a>
+<div class="worknav" id="worknav" role="dialog" aria-modal="true" aria-labelledby="worknav-h" hidden>
+  <div class="worknav-in wrap">
+    <div class="worknav-head"><h2 id="worknav-h">All work</h2><p>Choose a project to jump straight to it. Press J or K to move between case studies.</p><button type="button" class="worknav-x" id="worknav-x" aria-label="Close">&#215;</button></div>
+    <ul class="worknav-grid" id="worknav-grid"></ul>
+  </div>
+</div>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" data-top><span>Nino</span> <b>Sekeleni</b></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#work" data-all>Work</a>
+      <a class="opt" href="#about">About</a>
+      <a class="opt" href="#experience">Experience</a>
+      <button class="mode" id="mode" type="button" aria-pressed="false" aria-label="Switch to day mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><span>Night</span></button>
+      <span class="clock" id="clock" title="Local time in Johannesburg">Johannesburg</span>
+      <a class="cta" href="#contact">Get in Contact</a>
+    </nav>
+  </div>
+  <div class="rail" id="rail" aria-hidden="true">
+    <div class="wrap rail-in">
+      <button type="button" class="rail-all" id="rail-all" aria-haspopup="dialog" aria-controls="worknav"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>All work</button>
+      <nav class="rail-tabs" id="rail-tabs" aria-label="Case studies"><span class="rail-grp" data-cat="fintech">Payments and fintech</span><a href="#visa" data-case="visa"><span>01</span>Visa</a><a href="#fnb" data-case="fnb"><span>02</span>FNB</a><span class="rail-grp" data-cat="sport">Sport</span><a href="#lions" data-case="lions"><span>03</span>Lions</a><a href="#woza" data-case="woza"><span>04</span>Woza Nawe</a><a href="#icc" data-case="icc"><span>05</span>Proteas</a><span class="rail-grp" data-cat="brand">Brand identity</span><a href="#ikigai" data-case="ikigai"><span>06</span>Ikigai</a><a href="#deloitte" data-case="deloitte"><span>07</span>Deloitte</a><a href="#jifa" data-case="jifa"><span>08</span>JIFA</a><a href="#airfrance" data-case="airfrance"><span>09</span>Air France</a><span class="rail-grp" data-cat="craft">Design, film and AI</span><a href="#hillcountry" data-case="hillcountry"><span>10</span>Hill Country</a><a href="#harmony" data-case="harmony"><span>11</span>Harmony</a><a href="#petra" data-case="petra"><span>12</span>Petra</a><a href="#migration" data-case="migration"><span>13</span>Migration</a></nav>
+      <div class="rail-step"><button type="button" id="rail-prev" aria-label="Previous case study">&#8592;</button><button type="button" id="rail-next" aria-label="Next case study">&#8594;</button></div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap" aria-label="Introduction">
+    <div class="hero-grid">
+      <div>
+        <h1 class="lockup"><span class="ln"><span class="l1">Nino</span></span><span class="ln"><span class="l2">Sekeleni</span></span></h1>
+        <ul class="roles fade-up d1"><li>Creative Director</li><li>Art Director</li><li>Creative Strategist</li><li>AI Workflows</li></ul>
+        <p class="thesis fade-up d2">I lead creative for sport, culture and financial-services brands, building campaign platforms that run for whole seasons, from Visa's global sponsorships to Cricket South Africa and the DP World Lions. Today I bring AI into every stage of that work, from the first idea to the finished campaign.</p>
+        <div class="actions fade-up d3">
+          <a class="btn solid" href="#work">See the work
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2v12M3 9l5 5 5-5"/></svg></a>
+          <a class="btn ghost" href="nino-sekeleni-cv.pdf" target="_blank" rel="noopener">Download CV</a>
+        </div>
+      </div>
+      <figure class="portrait" style="margin:0">
+        <img src="img/portrait-knit.webp" width="1200" height="1350" alt="Black and white portrait of Nino Sekeleni, arms crossed, wearing a black turtleneck" fetchpriority="high">
+        <figcaption><span>Johannesburg, South Africa</span><span>Creative Lead at Migration</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="glance wrap" aria-label="At a glance">
+    <div class="glance-grid">
+      <div><h2>Now</h2><p><strong>Creative Lead at Migration</strong>, a strategy and creative studio in Johannesburg, London and Dubai, where I direct the creative on the studio's biggest sport and financial-services accounts.</p></div>
+      <div><h2>Known for</h2><p>Brand, sport and fintech campaigns for <strong>Visa, the ICC, Cricket South Africa and Lions Cricket</strong>, and AI-powered workflows that take ideas from concept to finished work faster.</p></div>
+      <div><h2>Proof</h2><p><strong>$2.4M</strong> in revenue Visa reported from four campaigns I led in a single quarter, <strong>32%</strong> growth in new-card spend on FNB × Visa, and <strong>R3.5M</strong> in sponsor media value for the DP World Lions, as measured by Nielsen Sports.</p></div>
+      <div><h2>Open to</h2><p>Creative director, creative lead and art director roles in any industry, wherever strong ideas and craft matter.</p></div>
+    </div>
+    <div class="glance-actions">
+      <a class="btn solid" href="mailto:sekelenin@gmail.com?subject=Hello%20Nino">Email me</a>
+      <a class="btn ghost" href="nino-sekeleni-cv.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/nino-sekeleni-a16b88121/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+  <section class="proof wrap" id="proof" aria-labelledby="proof-h">
+    <div class="proof-head">
+      <p class="proof-k">Proof</p>
+      <h2 id="proof-h">What the work has delivered</h2>
+      <p>The case studies below are a selection. These are the measured results behind the wider body of work, from Visa's partner-bank campaigns across Africa to the DP World Lions and the Proteas.</p>
+    </div>
+    <div class="proof-grid">
+      <div><b>$2.4M</b><span>in revenue Visa reported from four campaigns I led in one quarter, for FNB, Investec, CBZ and Chipper Cash</span><i>Visa Q1 FY26 marketing report</i></div>
+      <div><b>+32%</b><span>growth in new-card spend during FNB × Visa's It Starts Here</span><i>Visa Q1 FY26 marketing report</i></div>
+      <div><b>+28%</b><span>Visa payment volume in a single month for CBZ's AFCON campaign in Zimbabwe</span><i>Visa Q1 FY26 marketing report</i></div>
+      <div><b>+11%</b><span>cross-border transactions for Investec's Pep Guardiola FIFA campaign</span><i>Visa Q1 FY26 marketing report</i></div>
+      <div><b>R3.5M</b><span>sponsor media value on the DP World Lions' social channels, Aug 2022 to Jan 2024</span><i>Nielsen Sports</i></div>
+      <div><b>20M+</b><span>people reached by the Proteas' T20 World Cup 2024 campaign, paid and organic</span><i>Migration estimate</i></div>
+      <div><b>+124%</b><span>growth in the Lions' Instagram following, May 2021 to May 2024</span><i>Club channels</i></div>
+      <div><b>2×</b><span>Sport Organisation of the Year with Lions Cricket, 2023 and 2024</span><i>Hollard Sport Industry Awards</i></div>
+    </div>
+  </section>
+
+  <div class="clients" aria-label="Brands I have worked with">
+    <div class="track">
+      <ul>
+        <li>Visa</li><li>ICC</li><li>Cricket South Africa</li><li>Lions Cricket</li><li>Deloitte Digital</li><li>Harmony Gold</li><li>Air France</li><li>SuperSport</li><li>Petra Diamonds</li><li>FNB</li><li>JIFA</li><li>Nike</li><li>Puma</li><li>Checkers</li>
+      </ul>
+      <ul aria-hidden="true">
+        <li>Visa</li><li>ICC</li><li>Cricket South Africa</li><li>Lions Cricket</li><li>Deloitte Digital</li><li>Harmony Gold</li><li>Air France</li><li>SuperSport</li><li>Petra Diamonds</li><li>FNB</li><li>JIFA</li><li>Nike</li><li>Puma</li><li>Checkers</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="sec wrap" id="work" aria-labelledby="work-h">
+    <div class="sec-head" data-reveal>
+      <h2 id="work-h">Selected work</h2>
+      <p>Thirteen projects in four chapters, opening with payments and fintech, then sport, brand identity, and design, film and AI. Choose a project to jump to its story, or use the tabs that follow you down the page.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filter projects by discipline">
+      <button type="button" id="f-all" data-f="all" aria-pressed="true">All<span class="count">13</span></button>
+      <button type="button" id="f-fintech" data-f="fintech" aria-pressed="false">Payments and fintech<span class="count">2</span></button>
+      <button type="button" id="f-sport" data-f="sport" aria-pressed="false">Sport<span class="count">3</span></button>
+      <button type="button" id="f-brand" data-f="brand" aria-pressed="false">Brand identity<span class="count">4</span></button>
+      <button type="button" id="f-craft" data-f="craft" aria-pressed="false">Design, film and AI<span class="count">4</span></button>
+    </div>
+
+    <ul class="index" id="index">
+      <li class="grp" data-cat="fintech"><span>Payments and fintech</span></li>
+      <li data-cat="fintech"><a href="#visa"><span class="th"><img src="img/mfm-akani.webp" alt="" loading="lazy" style="object-position:70% 30%"></span><span class="t">A Moment for More</span><span class="c">Visa · Paris 2024</span><span class="d">Campaign</span><span class="ar" aria-hidden="true">→</span></a></li>
+      <li data-cat="fintech"><a href="#fnb"><span class="th"><img src="img/fnb-kv.webp" alt="" loading="lazy" style="object-position:25% 50%"></span><span class="t">It Starts Here</span><span class="c">Visa × FNB · FIFA World Cup 2026</span><span class="d">Campaign</span><span class="ar" aria-hidden="true">→</span></a></li>
+      <li class="grp" data-cat="sport"><span>Sport</span></li>
+      <li data-cat="sport"><a href="#lions"><span class="th"><img src="img/lions-matchday-titans.webp" alt="" loading="lazy" style="object-position:50% 18%"></span><span class="t">The Pride of Jozi</span><span class="c">DP World Lions Cricket</span><span class="d">Brand identity</span><span class="ar" aria-hidden="true">→</span></a></li>
+      <li data-cat="sport"><a href="#woza"><span class="th"><img src="img/woza-kv.webp" alt="" loading="lazy"></span><span class="t">Woza Nawe</span><span class="c">Cricket South Africa</span><span class="d">Brand campaign</span><span class="ar" aria-hidden="true">→</span></a></li>
+      <li data-cat="sport"><a href="#icc"><span class="th"><img src="img/t20-semi.webp" alt="" loading="lazy" style="object-position:50% 25%"></span><span class="t">Road to the final</span><span class="c">Proteas · T20 World Cup</span><span class="d">Campaign</span><span class="ar" aria-hidden="true">→</span></a></li>
+      <li class="grp" data-cat="brand"><span>Brand identity</span></li>
+      <li data-cat="brand"><a href="#ikigai"><span class="th"><img src="img/ik-cups.webp" alt="" loading="lazy"></span><span class="t">Where hustle meets harmony</span><span class="c">Ikigai Kofi Hys</span><span class="d">Brand identity</span><span class="ar" aria-hidden="true">→</span></a></li>
+      <li data-cat="brand"><a href="#deloitte"><span class="th"><img src="img/tfwm.webp" alt="" loading="lazy"></span><span class="t">Time for What Matters</span><span class="c">Deloitte Digital</span><span class="d">Campaign &amp; film</span><span class="ar" aria-hidden="true">→</span></a></li>
+      <li data-cat="brand"><a href="#jifa"><span class="th"><img src="img/jifa-1.webp" alt="" loading="lazy"></span><span class="t">A brand for African justice</span><span class="c">Judicial Institute for Africa</span><span class="d">Brand identity</span><span class="ar" aria-hidden="true">→</span></a></li>
+      <li data-cat="brand"><a href="#airfrance"><span class="th"><img src="img/af-poster-1.webp" alt="" loading="lazy" style="object-position:50% 30%"></span><span class="t">Decades of Connection</span><span class="c">Air France</span><span class="d">Event identity</span><span class="ar" aria-hidden="true">→</span></a></li>
+      <li class="grp" data-cat="craft"><span>Design, film and AI</span></li>
+      <li data-cat="craft"><a href="#hillcountry"><span class="th"><img src="img/hc-final-front.webp" alt="" loading="lazy" style="object-position:50% 35%"></span><span class="t">Formed to Take the Hill Country</span><span class="c">Lwazi Loyiso Qhama Dekeda</span><span class="d">AI-led book cover</span><span class="ar" aria-hidden="true">→</span></a></li>
+      <li data-cat="craft"><a href="#harmony"><span class="th"><img src="img/harmony-hero.webp" alt="" loading="lazy"></span><span class="t">Mining with Purpose</span><span class="c">Harmony Gold</span><span class="d">Graphic design</span><span class="ar" aria-hidden="true">→</span></a></li>
+      <li data-cat="craft"><a href="#petra"><span class="th"><img src="img/petra-9.webp" alt="" loading="lazy"></span><span class="t">Purpose Statement</span><span class="c">Petra Diamonds</span><span class="d">Animation</span><span class="ar" aria-hidden="true">→</span></a></li>
+      <li data-cat="craft"><a href="#migration"><span class="th"><img src="img/ux-hero.webp" alt="" loading="lazy"></span><span class="t">Studio website</span><span class="c">Migration</span><span class="d">UX/UI design</span><span class="ar" aria-hidden="true">→</span></a></li>
+    </ul>
+  </section>
+
+  <div class="wrap" id="cases">
+
+    <!-- Visa -->
+    <article class="case" id="visa" data-cat="fintech" aria-labelledby="visa-h">
+      <div class="case-head" data-reveal>
+        <div>
+          <h3 class="case-title" id="visa-h"><span class="case-client">Visa · Paris 2024 Olympic Games</span>A Moment for More</h3>
+          <dl class="facts"><dt>Role</dt><dd>Creative Lead, campaign and digital</dd><dt>Year</dt><dd>2024</dd><dt>Market</dt><dd>South Africa</dd><dt>Audience</dt><dd>Millennials and Gen Z</dd><dt>Channels</dt><dd>TikTok, Meta, in-game media, experiential, print</dd></dl>
+        </div>
+        <div class="story">
+          <p>The Olympic Games are one of Visa's biggest sponsorship properties, and the Paris 2024 brief in South Africa was to build brand love and preference while getting Millennials and Gen Z to use their Visa cards in store, online and across borders.</p>
+          <p>Our research surfaced three truths about this audience. They want to live life on their own terms, they value experiences and presence over possessions, and above all they crave a life well lived. One message could never land the same way with everyone, so we built a platform flexible enough to feel personal to each person: A Moment for More, the idea that every payment moment is a push towards more, whatever more means to you.</p>
+          <p>The platform ran across TikTok, Meta and in-game media with sprinter Akani Simbine as its hero and nine influencers across three tiers amplifying it, giving fans a chance to win R10,000 and meet him. We extended it into A Moment for Fun, an activation where Gen Z could give Akani their best South African shout-out or race a 100-metre sprint for a chance to meet him, and into issuer campaigns such as Absa's, where cardholders who spent R5,000 on their Visa card during the Games were entered into a draw to meet Akani.</p>
+          <p>In the same year I led the digital and print campaigns for Visa's sponsorships of both the Olympics and the ICC Men's T20 World Cup, with one consistent message across social and web.</p>
+          <p>That work has grown into a wider partnership with Visa's marketing services team, for whom I lead creative on the campaigns Visa runs with its partner banks across Africa. In Visa's own report for the first quarter of its 2026 financial year, Investec's Pep Guardiola FIFA campaign lifted cross-border transactions by 11% and spend per active card by 5%, and CBZ's AFCON campaign in Zimbabwe grew Visa payment volume by 28% in a month. Together with FNB's It Starts Here and Chipper Cash's AFCON launch in Nigeria, those four campaigns brought Visa $2.4M in revenue in a single quarter.</p>
+        </div>
+      </div>
+      <div class="results" data-reveal>
+        <div><b>9</b><span>influencers across three tiers, led by Akani Simbine</span></div>
+        <div><b>2</b><span>activation formats, Shout and Skrrt for Akani, at large and small scale</span></div>
+        <div><b>R10,000</b><span>to win, plus a meet-and-greet with Akani</span></div>
+        <div><b>2</b><span>global Visa properties led in one year, Paris 2024 and the T20 World Cup</span></div>
+      </div>
+      <div class="credits"><p class="credits-h">My credits</p><dl><dt>Strategy</dt><dd>I helped turn three audience truths about Millennials and Gen Z into a single flexible platform, A Moment for More.</dd><dt>Creative direction</dt><dd>I led the campaign across TikTok, Meta, in-game media and print, with Akani Simbine as its hero and nine influencers amplifying it.</dd><dt>Activation</dt><dd>I shaped A Moment for More into A Moment for Fun, the shout-out and 100-metre sprint activation for Gen Z.</dd><dt>Partners</dt><dd>I adapted the platform for issuer banks such as Absa, so partners could run it under their own brands.</dd><dt>Portfolio</dt><dd>In the same year I led digital and print for Visa&#x27;s ICC Men&#x27;s T20 World Cup sponsorship, keeping one message across both properties.</dd><dt>Partner banks</dt><dd>I lead creative for Visa&#x27;s marketing services team on campaigns with its partner banks, including FNB, Investec, CBZ and Chipper Cash.</dd></dl></div>
+      <p class="subhead">Visa partner-bank campaigns<small>Visa Q1 FY26 marketing report</small></p>
+      <div class="results">
+        <div><b>$2.4M</b><span>Visa revenue from four campaigns I led in one quarter</span></div>
+        <div><b>+11%</b><span>cross-border transactions, Investec Pep Guardiola FIFA campaign</span></div>
+        <div><b>+28%</b><span>payment volume in a month, CBZ Zimbabwe AFCON campaign</span></div>
+        <div><b>+5%</b><span>spend per active Visa card, Investec</span></div>
+      </div>
+      <div class="media">
+        <figure class="bg-visa" style="aspect-ratio:21/8"><video controls poster="img/mfm-loop-poster.webp" playsinline preload="none" aria-label="Animated A Moment for More wordmark cycling through words such as freedom, adventure and sport"><source src="img/mfm-loop.webm" type="video/webm"><source src="img/mfm-loop.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="media g2 stack" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure class="a169"><img src="img/mfm-akani.webp" width="1600" height="900" alt="Key visual of Akani Simbine with the line You could win R10,000" loading="lazy"></figure>
+        <figure class="a169"><img src="img/mfm-social.webp" width="1600" height="900" alt="A Moment for More social posts and mobile story" loading="lazy"></figure>
+      </div>
+      <div class="media" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure><img src="img/visa.webp" width="1800" height="1558" alt="A Moment for More campaign assets in Paris, with Notre-Dame, a mobile post featuring Akani Simbine and Visa Paris 2024 cards" loading="lazy"></figure>
+      </div>
+      <div class="media g2 stack" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure class="a169"><img src="img/mfm-fun.webp" width="1600" height="900" alt="The campaign influencer line-up, led by Akani Simbine" loading="lazy"></figure>
+        <figure class="a169"><img src="img/mfm-journey.webp" width="1600" height="900" alt="A Moment for Fun activation booths for Shout for Akani and Skrrt for Akani" loading="lazy"></figure>
+      </div>
+      <div class="media g3" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure class="a11 contain bg-visa"><img src="img/mfm-absa-paris.webp" width="441" height="447" alt="Absa and Visa post: stand to win a trip to Paris" loading="lazy"></figure>
+        <figure class="a11 contain bg-visa"><img src="img/mfm-phone.webp" width="700" height="963" alt="Mobile story inviting fans to meet Akani Simbine" loading="lazy"></figure>
+        <figure class="a11 contain bg-visa"><img src="img/mfm-absa-gold.webp" width="609" height="339" alt="Absa and Visa Go for Gold cashback banner" loading="lazy"></figure>
+      </div>
+    </article>
+
+    <!-- FNB -->
+    <article class="case" id="fnb" data-cat="fintech" aria-labelledby="fnb-h">
+      <div class="case-head" data-reveal>
+        <div>
+          <h3 class="case-title" id="fnb-h"><span class="case-client">Visa × FNB · FIFA World Cup 2026</span>It Starts Here</h3>
+          <dl class="facts"><dt>Role</dt><dd>Creative Lead, campaign and art direction</dd><dt>Launch</dt><dd>July 2025</dd><dt>Segments</dt><dd>Personal, Private and Commercial</dd><dt>Channels</dt><dd>Film, radio, digital OOH, social, direct mail, web</dd></dl>
+        </div>
+        <div class="story">
+          <p>Visa briefed Migration to help FNB become the first South African bank to own the FIFA World Cup 2026 conversation, a full year before the tournament kicks off.</p>
+          <p>The answer was It Starts Here, a three-phase campaign built on the belief that every big moment begins somewhere close to home, on a township pitch, at a spaza shop or in a small business getting ready for the tournament. We wrote it for FNB's Personal, Private and Commercial customers and carried it through a 60-second manifesto film, radio, digital out-of-home, social, direct mail and web.</p>
+          <p>The first phase, Tap &amp; Win, gave FNB Visa cardholders who shopped between July and September 2025 the chance to win a trip to the World Cup or a match-day kit, and a live activation at Mall of Africa brought the campaign to fans in person. At launch, FNB's chief marketing officer described FNB as the first bank to bring the 2026 FIFA World Cup to South Africans, with three customers set to travel to the tournament. Visa's own report on the quarter recorded growth in cards in force and active cards, more than 32% growth in new-card spend, and lower dormancy across FNB's Visa base.</p>
+        </div>
+      </div>
+      <div class="results" data-reveal>
+        <div><b>1st</b><span>South African bank to bring the FIFA World Cup 2026 to its customers</span></div>
+        <div><b>3</b><span>customers flown to the World Cup through Tap &amp; Win</span></div>
+        <div><b>+32%</b><span>growth in new-card spend during the campaign, Visa Q1 FY26 report</span></div>
+        <div><b>3</b><span>customer segments, Personal, Private and Commercial</span></div>
+      </div>
+      <div class="credits"><p class="credits-h">My credits</p><dl><dt>Creative direction</dt><dd>I led the creative team that developed It Starts Here and its three-phase structure for FNB&#x27;s first year of the World Cup.</dd><dt>Film</dt><dd>I set the creative direction for the 60-second manifesto film that launched the campaign.</dd><dt>Art direction</dt><dd>I art-directed the key visual and its adaptations for FNB&#x27;s Personal, Private and Commercial customers.</dd><dt>Integration</dt><dd>I directed the rollout across radio, digital out-of-home, social, direct mail, web and the Mall of Africa activation.</dd></dl></div>
+      <div class="media">
+        <figure class="a169" style="background:#000"><video controls playsinline preload="none" poster="img/fnb-manifesto-poster.webp" aria-label="It Starts Here manifesto film for FNB and Visa"><source src="img/fnb-manifesto.webm" type="video/webm"><source src="img/fnb-manifesto.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="media g3" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure class="a45"><img src="img/fnb-personal.webp" width="900" height="1125" alt="Personal segment post: two boys with a football in front of a painted wall" loading="lazy"></figure>
+        <figure class="a45"><img src="img/fnb-commercial.webp" width="900" height="1125" alt="Commercial segment post: an aerial view of a packed football stadium" loading="lazy"></figure>
+        <figure class="a45"><img src="img/fnb-activation.webp" width="900" height="1125" alt="Activation post inviting fans to Mall of Africa" loading="lazy"></figure>
+      </div>
+      <div class="media g2 stack" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure class="a169"><img src="img/fnb-kv.webp" width="1600" height="900" alt="It Starts Here key visual: friends huddled together, with the Tap and Win offer" loading="lazy"></figure>
+        <figure class="a169"><img src="img/fnb-itshere.webp" width="1600" height="900" alt="It's Here, Tap and Win: fans celebrating" loading="lazy"></figure>
+      </div>
+    </article>
+
+    <!-- Lions -->
+    <article class="case" id="lions" data-cat="sport" aria-labelledby="lions-h">
+      <div class="case-head" data-reveal>
+        <div>
+          <h3 class="case-title" id="lions-h"><span class="case-client">DP World Lions Cricket</span>The Pride of Jozi</h3>
+          <dl class="facts"><dt>Role</dt><dd>Creative Lead, brand and campaigns</dd><dt>Seasons</dt><dd>Four seasons as creative lead, 2022/23 to today</dd><dt>Discipline</dt><dd>Brand identity, campaigns, match-day content</dd><dt>Partner</dt><dd>Migration, strategic and creative partner</dd></dl>
+        </div>
+        <div class="story">
+          <p>Migration has been the strategic and creative partner to Lions Cricket for five seasons, and for four of them I have led the brand and campaign creative for the men's and women's teams, building The Pride of Jozi across brand, content, commercial and match-day communication.</p>
+          <p>The Pride of Jozi joins the idea of a lions' pride with the city's pride in its team. We turned it into a full brand system for the DP World Lions, with a professional brand book, stationery and merchandise, and into a match-day content engine that covers fixtures, results, player milestones, sponsor moments such as Acronis' Catch of the Match, and events like the season launch at DP World Wanderers Stadium. The DP World Lions manifesto film puts the players in front of the camera to tell fans, in their own words, what the Pride of Jozi stands for.</p>
+          <p>The results are measured independently. Nielsen Sports valued the sponsor exposure on the Lions' own social channels at R3.5 million in advertising value between August 2022 and January 2024, from 3,996 branded posts that earned 23.2 million impressions. The corner logo I built into every post template was Nielsen's single most valuable sponsor placement, with 6.25 million impressions. Between May 2021 and May 2024 the club's Instagram following more than doubled, from 7,200 to 16,100.</p>
+          <p>Each season carries its own theme, and on the field the Lions won seven trophies in 2023/24. Off it, the work helped the club win Sport Organisation of the Year at the Hollard Sport Industry Awards in both 2023 and 2024.</p>
+        </div>
+      </div>
+      <div class="results" data-reveal>
+        <div><b>R3.5M</b><span>sponsor media value on Lions social, Nielsen Sports, Aug 2022 to Jan 2024</span></div>
+        <div><b>23.2M</b><span>sponsor impressions from 3,996 branded posts, Nielsen Sports</span></div>
+        <div><b>+124%</b><span>Instagram followers, May 2021 to May 2024</span></div>
+        <div><b>2×</b><span>Sport Organisation of the Year, Hollard Sport Industry Awards 2023 and 2024</span></div>
+      </div>
+      <div class="credits"><p class="credits-h">My credits</p><dl><dt>Creative direction</dt><dd>I have led the brand and campaign creative for the men&#x27;s and women&#x27;s teams for four seasons, setting a new theme for each one.</dd><dt>Brand system</dt><dd>I art-directed The Pride of Jozi into a full brand book, with stationery, merchandise and kit applications that the club uses today.</dd><dt>Content engine</dt><dd>I designed the match-day template system, including the corner sponsor placement that Nielsen ranked the most valuable on the club&#x27;s channels.</dd><dt>Film</dt><dd>I set the creative direction for the DP World Lions manifesto film, which puts the players in front of the camera.</dd><dt>Pitch</dt><dd>I led the creative for Migration&#x27;s 2025 proposal to the club, which kept the partnership going into a fifth season.</dd></dl></div>
+      <div class="media">
+        <figure class="a169" style="background:#1b2350"><video controls playsinline preload="none" poster="img/lions-manifesto-poster.webp" aria-label="DP World Lions manifesto film, #ThePrideOfJozi"><source src="img/lions-manifesto.webm" type="video/webm"><source src="img/lions-manifesto.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="media" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure class="a169" style="background:#0f1f4a"><video controls playsinline preload="none" poster="img/lions-manifesto2-poster.webp" aria-label="Imperial Lions manifesto film, The Pride of Jozi"><source src="img/lions-manifesto2.webm" type="video/webm"><source src="img/lions-manifesto2.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="media g3" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure class="a45"><img src="img/lions-matchday-titans.webp" width="900" height="1125" alt="T20 Challenge matchday post for DP World Lions versus Momentum Multiply Titans, a player in the new gold kit in front of a packed stadium" loading="lazy"></figure>
+        <figure class="a45"><img src="img/lions-xi-warriors.webp" width="900" height="1125" alt="Starting XI post for DP World Lions versus Dafabet Warriors with a large XI and a signed player portrait" loading="lazy"></figure>
+        <figure class="a45"><img src="img/lions-kwena.webp" width="900" height="1125" alt="Kwena Maphaka Proteas debut post for the Lions" loading="lazy"></figure>
+      </div>
+      <div class="media lions" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure class="kit"><img src="img/lions-p1.webp" width="793" height="2288" alt="Lions player in the navy and gold kit" loading="lazy"><img src="img/lions-p2.webp" width="768" height="2122" alt="Lions player in the gold kit with a patterned sleeve" loading="lazy"><img src="img/lions-p3.webp" width="709" height="2213" alt="Lions player in the all-gold kit" loading="lazy"></figure>
+        <figure class="themes">
+          <div><h4><span>2021/22</span>Pride of Jozi</h4><p>The franchise positions itself as the Pride of Jozi, blending its identity as a lions' pride with being the city's pride.</p></div>
+          <div><h4><span>2022/23</span>Pride of Jozi</h4><p>The theme carries on, this time showcasing and celebrating the team's African roots.</p></div>
+          <div><h4><span>2023/24</span>Home of Champions</h4><p>The Lions live up to the name, winning seven trophies across their divisions.</p></div>
+          <div><h4><span>2024/25</span>Spirit of Champions</h4><p>After two more major trophies, Home of Champions grows into Spirit of Champions as the Lions settle in as the country's top franchise.</p></div>
+        </figure>
+      </div>
+      <div class="media g2" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure class="a169"><img src="img/lions-bb-logos.webp" width="1600" height="900" alt="DP World Lions logo lockups on gold and navy" loading="lazy"></figure>
+        <figure class="a169"><img src="img/lions-bb-stationery.webp" width="1600" height="900" alt="DP World Lions stationery with The Pride of Jozi media advisory banner" loading="lazy"></figure>
+        <figure class="a169"><img src="img/lions-bb-mockup.webp" width="1600" height="900" alt="DP World Lions office stationery mock-up" loading="lazy"></figure>
+        <figure class="a169"><img src="img/lions-bb-merch.webp" width="1600" height="900" alt="Lions merchandise including caps, bottles and keyrings" loading="lazy"></figure>
+      </div>
+      <div class="media g3" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure class="a45 contain bg-navy"><img src="img/lions-kit-navy.webp" width="499" height="674" alt="Lions navy training shirt" loading="lazy"></figure>
+        <figure class="a45"><img src="img/lions-xi-wtc.webp" width="900" height="1125" alt="ICC World Test Championship Final 2025 Starting XI, highlighting the four DP World Lions players in the Proteas side" loading="lazy"></figure>
+        <figure class="a45 contain bg-gold"><img src="img/lions-kit-dpw.webp" width="563" height="692" alt="DP World Lions playing shirt" loading="lazy"></figure>
+      </div>
+      <div class="media" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure style="aspect-ratio:1856/578"><img src="img/lions-trophy.webp" width="1856" height="578" alt="DP World Lions players celebrating with a trophy" loading="lazy"></figure>
+        <figure class="tl" style="background:#fff;padding:clamp(1rem,3vw,2.5rem) clamp(1rem,6vw,6rem)"><img src="img/lions-timeline.webp" width="1480" height="620" alt="The Lions logo over time: Highveld Lions from 2003 to 2011, Central Gauteng Lions from 2011 to 2021, and the current Lions mark from 2021" loading="lazy" style="object-fit:contain"></figure>
+      </div>
+    </article>
+
+    <!-- Woza Nawe -->
+    <article class="case" id="woza" data-cat="sport" aria-labelledby="woza-h">
+      <div class="case-head" data-reveal>
+        <div>
+          <h3 class="case-title" id="woza-h"><span class="case-client">Cricket South Africa</span>Woza Nawe</h3>
+          <dl class="facts"><dt>Role</dt><dd>Creative Lead, concept and identity</dd><dt>Seasons</dt><dd>CSA domestic seasons 2023/24 and 2024/25</dd><dt>Scope</dt><dd>Identity, SuperSport TVC and endboards, song and dance challenge, in-stadium, OOH, ticketing, social</dd><dt>Line</dt><dd>Be Part of It</dd></dl>
+        </div>
+        <div class="story">
+          <p>Cricket South Africa wanted more South Africans in the stands at domestic matches, so I conceptualised and launched Woza Nawe, an isiZulu invitation to come along and be part of it. CSA launched it as the theme of the 2023/24 men's domestic season, a call to rally behind your hometown team, and carried it into 2024/25, when the T20 Challenge ran as the Woza Nawe 2024/25 T20 Challenge.</p>
+          <p>I built the identity around a burst of colour big enough to hold every union and every fan, then created an asset toolkit that let the campaign roll out across whole seasons. It carried a TVC and endboards for SuperSport, an original Woza Nawe song with a #WozaNaweDance challenge, in-stadium dance-cam graphics, merchandise stands, billboards and ticket promotions such as R20 tickets and free entry for the first 2,000 fans.</p>
+          <p>Because the system was designed to flex, it carried CSA's domestic promotions across both seasons and into 2025, from the CSA T20 Challenge final at DP World Wanderers Stadium to a Woza Nawe family package that gave fans two free tickets for every four they bought.</p>
+        </div>
+      </div>
+      <div class="results" data-reveal>
+        <div><b>2</b><span>seasons as CSA's domestic theme, 2023/24 and 2024/25</span></div>
+        <div><b>16</b><span>domestic teams brought together under one banner</span></div>
+        <div><b>3</b><span>TVC lengths for SuperSport, at 60, 30 and 15 seconds</span></div>
+        <div><b>2,000</b><span>fans a stadium given free entry, alongside R20 tickets</span></div>
+      </div>
+      <div class="credits"><p class="credits-h">My credits</p><dl><dt>Idea</dt><dd>I originated Woza Nawe, the platform and the name, as an invitation for South Africans to come back to domestic cricket.</dd><dt>Identity</dt><dd>I designed the colour-burst identity and the asset toolkit that carried the campaign across two full seasons.</dd><dt>Film and music</dt><dd>I set the creative direction for the SuperSport TVC and endboards, and for the Woza Nawe song and #WozaNaweDance challenge.</dd><dt>Rollout</dt><dd>I directed the design and animation team across in-stadium, outdoor, ticketing and social, keeping every union and promotion inside one system.</dd><dt>With</dt><dd>Migration&#x27;s design team, with FORT on animation.</dd></dl></div>
+      <div class="media">
+        <figure class="a169"><a class="film" href="https://drive.google.com/file/d/1ywepDt4eyLlFCr_c1Arp7JmRM30jzIdE/view" target="_blank" rel="noopener">
+          <img src="img/tvc.webp" width="1800" height="1015" alt="Still from the Woza Nawe TVC: South African supporters cheering in green and gold" loading="lazy">
+          <span class="play"><i></i><b>Watch the TVC</b></span></a></figure>
+      </div>
+      <div class="media g3" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure class="a169"><img src="img/woza-kv.webp" width="1800" height="1012" alt="Woza Nawe key visual, a burst of colour around the wordmark" loading="lazy"></figure>
+        <figure class="a169"><img src="img/woza-kv-csa.webp" width="1800" height="1012" alt="Woza Nawe key visual with Cricket South Africa, Be Part of It and the 16 domestic team logos" loading="lazy"></figure>
+        <figure class="a169"><img src="img/woza-tent.webp" width="1400" height="1050" alt="Woza Nawe merchandise stand" loading="lazy"></figure>
+      </div>
+      <div class="media g3" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure class="a45"><img src="img/woza-promo.webp" width="900" height="1125" alt="Woza Nawe promo post for R20 tickets with the DP World Lions" loading="lazy"></figure>
+        <figure class="a45"><img src="img/csa-free-entry.webp" width="534" height="666" alt="Woza Nawe free entry post for the first 2,000 fans" loading="lazy"></figure>
+        <figure class="a45 contain" style="background:#0f7a3c"><img src="img/woza-spotify.webp" width="480" height="920" alt="The Woza Nawe song on a music streaming app" loading="lazy"></figure>
+      </div>
+      <div class="media" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure style="aspect-ratio:5/2"><img src="img/woza-billboard.webp" width="2000" height="800" alt="Billboard for the CSA T20 Challenge final between the DP World Lions and Hollywoodbets Dolphins" loading="lazy"></figure>
+      </div>
+    </article>
+
+    <!-- ICC -->
+    <article class="case" id="icc" data-cat="sport" aria-labelledby="icc-h">
+      <div class="case-head" data-reveal>
+        <div>
+          <h3 class="case-title" id="icc-h"><span class="case-client">ICC Men's T20 World Cup 2024 · Proteas</span>Road to the final</h3>
+          <dl class="facts"><dt>Role</dt><dd>Creative Lead, tournament campaign and match-day content</dd><dt>Client</dt><dd>Cricket South Africa</dd><dt>Event</dt><dd>West Indies and USA, June 2024</dd></dl>
+        </div>
+        <div class="story">
+          <p>For the ICC Men's T20 World Cup 2024 we ran the Proteas' tournament campaign and a live match-day content system that covered every moment, from fixture reminders and team announcements to toss results, milestones, partnerships and final scores.</p>
+          <p>I led the creative for that system and built the templates that let the team publish on-brand posts in real time, through matches that often started in the middle of the South African night. With paid amplification and tournament collateral behind it, the work reached an estimated 20 million people as the Proteas won eight matches in a row on their way to their first men's World Cup final. That final against India became the most-watched T20 World Cup final to that point, with a peak of 53 million concurrent viewers on Disney+ Hotstar alone.</p>
+          <p>Around the tournament, our Cricket South Africa work covers always-on communication for the men's and women's teams and the Woza Nawe campaign, all designed to drive awareness, attendance and national support.</p>
+        </div>
+      </div>
+      <div class="results" data-reveal>
+        <div><b>20M+</b><span>people reached, paid and organic, June 2024 (Migration estimate)</span></div>
+        <div><b>9</b><span>matches covered live, from fixture reminder to final score</span></div>
+        <div><b>8</b><span>straight wins on the road to the final</span></div>
+        <div><b>1st</b><span>men's World Cup final for the Proteas</span></div>
+      </div>
+      <div class="credits"><p class="credits-h">My credits</p><dl><dt>Creative direction</dt><dd>I led the creative for the Proteas&#x27; tournament campaign and its collateral.</dd><dt>System design</dt><dd>I designed the live match-day template system, covering fixtures, the XI, the toss, milestones, partnerships and results.</dd><dt>Operations</dt><dd>I set up the templates and workflow that let the team publish on-brand posts in real time through matches that ran overnight in South Africa.</dd></dl></div>
+      <div class="media g3">
+        <figure class="a45"><img src="img/t20-semi.webp" width="1080" height="1350" alt="Match day post for South Africa against Afghanistan in the semi-final, Trinidad" loading="lazy"></figure>
+        <figure class="a45"><img src="img/t20-result.webp" width="1080" height="1350" alt="Result post: South Africa won by 9 wickets" loading="lazy"></figure>
+        <figure class="a45"><img src="img/icc-finals.webp" width="1200" height="1467" alt="Proteas players under the word Finals" loading="lazy"></figure>
+      </div>
+      <p class="subhead">The match-day feed <small>Scroll sideways</small></p>
+      <div class="feed" tabindex="0" aria-label="Match-day posts from the tournament">
+        <figure><img src="img/t20-matchday.webp" width="276" height="333" alt="Match day post" loading="lazy"></figure>
+        <figure><img src="img/t20-xi.webp" width="276" height="333" alt="Starting XI post" loading="lazy"></figure>
+        <figure><img src="img/t20-toss.webp" width="276" height="333" alt="Toss result post" loading="lazy"></figure>
+        <figure><img src="img/t20-innings.webp" width="276" height="333" alt="Change of innings post" loading="lazy"></figure>
+        <figure><img src="img/t20-partnership.webp" width="276" height="333" alt="Partnership post for Klaasen and Stubbs" loading="lazy"></figure>
+        <figure><img src="img/t20-nortje.webp" width="276" height="333" alt="Anrich Nortje bowling figures post" loading="lazy"></figure>
+        <figure><img src="img/t20-won18.webp" width="276" height="333" alt="Result post: South Africa won by 18 runs" loading="lazy"></figure>
+        <figure><img src="img/t20-next.webp" width="276" height="333" alt="Next fixture post" loading="lazy"></figure>
+        <figure><img src="img/t20-player.webp" width="276" height="333" alt="Player feature post" loading="lazy"></figure>
+        <figure><img src="img/t20-finals.webp" width="276" height="333" alt="Finals post" loading="lazy"></figure>
+      </div>
+      <p class="subhead">Always-on Proteas</p>
+      <div class="media g3">
+        <figure class="a45"><img src="img/w-wolvaardt.webp" width="800" height="1000" alt="Laura Wolvaardt fifty milestone post" loading="lazy"></figure>
+        <figure class="a45"><img src="img/w-partnership.webp" width="800" height="1000" alt="Wolvaardt and Kapp 214-run partnership post" loading="lazy"></figure>
+        <figure class="a45"><img src="img/w-matchday.webp" width="800" height="1000" alt="Proteas women Test match day post in Chennai" loading="lazy"></figure>
+      </div>
+    </article>
+
+    <!-- Ikigai -->
+    <article class="case" id="ikigai" data-cat="brand" aria-labelledby="ik-h">
+      <div class="case-head" data-reveal>
+        <div>
+          <h3 class="case-title" id="ik-h"><span class="case-client">Ikigai Kofi Hys · Brand identity</span>Where hustle meets harmony</h3>
+          <dl class="facts"><dt>Role</dt><dd>Brand identity, art direction and web design</dd><dt>Year</dt><dd>2026</dd><dt>Place</dt><dd>Alexandra, Johannesburg</dd><dt>Scope</dt><dd>Positioning, identity, guidelines, packaging, signage, uniforms, menu, website and social</dd><dt>AI</dt><dd>Every application visualised in the space before production</dd></dl>
+        </div>
+        <div class="story">
+          <p>Ikigai Kofi Hys is a new coffee house in Alexandra that joins the Japanese idea of ikigai, a reason for being, with "kofi hys", the township's own word for a coffee house. It needed a brand that could feel tranquil and vibrant at once, a place to slow down that still carries the rhythm of the street outside.</p>
+          <p>I built the identity around that meeting of two worlds, which the guidelines call Afro-Zen. The wordmark is custom lettering drawn with the rhythm of a Japanese reed pen, its floating i-dots a nod to lanterns and breath, and it sits on a palette of forest, beige, charcoal and white, with Cormorant Garamond and Inter setting the voice. An ensō circle, a single brushstroke and an ink splash give the brand three quiet motifs, and "Pour. Sit. Breathe." gives it a line of its own.</p>
+          <p>I then carried the system through every touchpoint the shop needs, from takeaway cups, menu boards and the printed menu to an A-frame, a window decal, a hero wall, aprons, a loyalty card, the website and its social pages. I used AI to visualise each application in the space, so the owners could see the whole brand working together before anything went to print.</p>
+          <p>I also designed and built the shop's website, which leads with venue hire alongside the menu so the space can earn beyond the counter. Its enquiry form turns a table booking or venue request into a ready-to-send WhatsApp message, so requests arrive where the team already talks to customers and nothing is stored on a server. The full menu and venue rates are one tap away as downloads, and local search markup helps people find it as a coffee shop in Alexandra.</p>
+        </div>
+      </div>
+      <div class="results">
+        <div><b>6</b><span>chapters in the brand guidelines, from story to brand in action</span></div>
+        <div><b>3</b><span>enquiry types, from table bookings to venue hire, handled through one WhatsApp flow</span></div>
+        <div><b>14</b><span>touchpoints designed, from the cup to the website</span></div>
+        <div><b class="txt">Pour. Sit. Breathe.</b><span>the line that runs through the space</span></div>
+      </div>
+      <div class="credits"><p class="credits-h">My credits</p><dl><dt>Positioning</dt><dd>I shaped the Afro-Zen positioning, the brand story, the personality and the tone of voice.</dd><dt>Identity</dt><dd>I designed the wordmark, the logo system, the palette, the type pairing and the three brand motifs.</dd><dt>Guidelines</dt><dd>I wrote and designed the brand guidelines so the owners and their team can apply the brand on their own.</dd><dt>Applications</dt><dd>I art-directed the packaging, signage, uniforms, print and interior graphics, visualising each one in the space with AI before production.</dd><dt>Digital</dt><dd>I designed and built the website, with a WhatsApp enquiry flow for bookings and venue hire, downloadable menu and rates, and local search markup, and I designed the social pages.</dd><dt>Ongoing</dt><dd>I continue to design for the shop, from the printed menu and wall panels to event artwork for nights such as Reggae Thursday and Heritage Day.</dd></dl></div>
+      <div class="media g2">
+        <figure class="full"><img src="img/ik-cover.webp" width="1800" height="1012" alt="Ikigai brand guidelines cover with a forest-green takeaway cup in a warm-lit coffee house" loading="lazy"></figure>
+        <figure><img src="img/ik-mark.webp" width="1800" height="1012" alt="The Ikigai Kofi Hys wordmark in white on forest green" loading="lazy"></figure>
+        <figure><img src="img/ik-palette.webp" width="1800" height="1012" alt="The Ikigai palette of forest, white, beige and charcoal" loading="lazy"></figure>
+      </div>
+      <p class="subhead">In the space</p>
+      <div class="media g2">
+        <figure class="full"><img src="img/ik-cups.webp" width="1800" height="1012" alt="Forest, cream and black Ikigai takeaway cups on a wooden counter" loading="lazy"></figure>
+        <figure><img src="img/ik-barista.webp" width="1800" height="1012" alt="A barista in an Ikigai apron handing over a takeaway cup" loading="lazy"></figure>
+        <figure><img src="img/ik-staff.webp" width="1800" height="1012" alt="Three Ikigai staff in forest, cream and charcoal aprons" loading="lazy"></figure>
+        <figure><img src="img/ik-aframe.webp" width="1800" height="1012" alt="Ikigai A-frame street sign reading Pour. Sit. Breathe." loading="lazy"></figure>
+        <figure><img src="img/ik-window.webp" width="1800" height="1012" alt="Ikigai window decal with opening hours" loading="lazy"></figure>
+        <figure><img src="img/ik-wall.webp" width="1800" height="1012" alt="Hero wall graphic reading Find your reason to rise" loading="lazy"></figure>
+        <figure><img src="img/ik-loyalty.webp" width="1800" height="1012" alt="Ikigai loyalty card and printed keepsakes on a café table" loading="lazy"></figure>
+      </div>
+      <p class="subhead">The website<small>Designed and built by me</small></p>
+      <div class="media g2">
+        <figure class="full" style="aspect-ratio:1800/1125"><img src="img/ik-site-hero.webp" width="1800" height="1125" alt="Ikigai Kofi Hys website home page with a barista and the line Where hustle meets harmony" loading="lazy"></figure>
+        <figure style="aspect-ratio:1800/1125"><img src="img/ik-site-menu.webp" width="1800" height="1125" alt="Menu highlights section of the Ikigai website with prices and a download link" loading="lazy"></figure>
+        <figure style="aspect-ratio:1800/1125"><img src="img/ik-site-venue.webp" width="1800" height="1125" alt="Venue hire section of the Ikigai website listing spaces and rates" loading="lazy"></figure>
+        <figure class="full" style="aspect-ratio:1800/1240;background:#1a3a2e"><img src="img/ik-site-mobile.webp" width="1800" height="1240" alt="Three mobile screens of the Ikigai website: home, menu and venue hire, each with a WhatsApp button" loading="lazy"></figure>
+      </div>
+      <p class="subhead">Social pages<small>From the brand guidelines</small></p>
+      <div class="media">
+        <figure><img src="img/ik-web.webp" width="1800" height="1012" alt="Ikigai website concept beside its Instagram and Facebook pages and merchandise" loading="lazy"></figure>
+      </div>
+    </article>
+
+    <!-- Deloitte -->
+    <article class="case" id="deloitte" data-cat="brand" aria-labelledby="del-h">
+      <div class="case-head" data-reveal>
+        <div>
+          <h3 class="case-title" id="del-h"><span class="case-client">Deloitte Digital</span>Time for What Matters</h3>
+          <dl class="facts"><dt>Role</dt><dd>Creative Lead, concept and visual identity</dd><dt>Partnership</dt><dd>November 2021 to 2025</dd><dt>Channels</dt><dd>LinkedIn, Instagram, podcast, internal platforms</dd><dt>Also</dt><dd>Innovation lab, rollout plan, photo and video, illustrated team characters</dd></dl>
+        </div>
+        <div class="story">
+          <p>Deloitte wanted to position an ambitious team of impact makers who drive change in a landscape where digital adoption happens piece by piece.</p>
+          <p>The audience was tired of campaigns and wary after earlier missteps, so the work had to start from a real insight. I led the team that developed Time for What Matters, crafting a visual identity and an ideology that resonated across traditional and non-traditional platforms. A content-driven approach positioned Deloitte Digital inside and outside the firm through LinkedIn, Instagram, a podcast and internal channels.</p>
+          <p>The partnership grew well beyond the launch. We ran an innovation lab with the team, project-managed the rollout, produced photography and video around the new narrative, and I art-directed a set of illustrated characters of the Deloitte Digital team for their swag pack and internal comms. The platform kept working long after launch, closing Deloitte's Mining Indaba content in 2024, and its breathing film was repurposed for Deloitte's decompression stations at Mining Indaba 2025.</p>
+        </div>
+      </div>
+      <div class="media g2 stack">
+        <figure style="aspect-ratio:1800/1573"><img src="img/deloitte.webp" width="1800" height="1573" alt="Time for What Matters Instagram grid and social posts" loading="lazy"></figure>
+        <figure style="align-self:center;background:none;aspect-ratio:1800/1014">
+          <a class="film" href="https://drive.google.com/file/d/1c7nSjwHU4AHYgR_5f6Io7wU7s-5RH2ol/view" target="_blank" rel="noopener">
+            <img src="img/tfwm.webp" width="1800" height="1014" alt="Opening frame of the Time for What Matters film, a coastline at dusk" loading="lazy">
+            <span class="play"><i></i><b>Watch the film</b></span>
+          </a>
+        </figure>
+      </div>
+      <div class="results" data-reveal>
+        <div><b>3+</b><span>years as Deloitte Digital's platform, from November 2021</span></div>
+        <div><b>19</b><span>illustrated characters of the Deloitte Digital team</span></div>
+        <div><b>2</b><span>Mining Indaba editions carrying the platform, 2024 and 2025</span></div>
+        <div><b>4</b><span>channels, LinkedIn, Instagram, a podcast and internal platforms</span></div>
+      </div>
+      <div class="credits"><p class="credits-h">My credits</p><dl><dt>Idea</dt><dd>I led the team that developed Time for What Matters, starting from an insight about an audience that was tired of campaigns.</dd><dt>Identity</dt><dd>I created the visual identity and the ideology that carried the platform across LinkedIn, Instagram, a podcast and internal channels.</dd><dt>Art direction</dt><dd>I art-directed 19 illustrated characters of the Deloitte Digital team for their swag pack and internal comms.</dd><dt>Partnership</dt><dd>I remained creative lead across a partnership of more than three years, including the innovation lab and two Mining Indaba editions.</dd></dl></div>
+      <p class="subhead">Illustrated team characters</p>
+      <div class="media"><figure style="aspect-ratio:2000/348;background:#f2f1ee"><img src="img/deloitte-avatars.webp" width="2000" height="348" alt="Six illustrated characters of Deloitte Digital team members" loading="lazy"></figure></div>
+      <figure class="quote" data-reveal>
+        <blockquote>“Throughout our journey with Migration the team stayed true to their slogan, creating simple journeys, and ensured they delivered everything on time with the utmost professionalism and consistency.”</blockquote>
+        <figcaption><b>Su-Ann Badenhorst</b>, Digital and Innovation Marketing Lead, Deloitte Digital</figcaption>
+      </figure>
+    </article>
+
+    <!-- JIFA -->
+    <article class="case" id="jifa" data-cat="brand" aria-labelledby="jifa-h">
+      <div class="case-head" data-reveal>
+        <div>
+          <h3 class="case-title" id="jifa-h"><span class="case-client">Judicial Institute for Africa</span>A brand for African justice</h3>
+          <dl class="facts"><dt>Role</dt><dd>Creative Lead, brand identity</dd><dt>Discipline</dt><dd>Identity, brand guidelines, templates</dd></dl>
+        </div>
+        <div class="story">
+          <p>JIFA leads judicial training across Africa, so its identity needed to feel professional, authoritative and worthy of trust.</p>
+          <p>I led the brand and its guidelines, from the logo lockups and a restrained navy, grey and stone palette to a set of infographic icons, a tone of imagery, document covers, brochures and social templates. Together they position JIFA as a respected partner in advancing legal education on the continent.</p>
+        </div>
+      </div>
+      <div class="credits"><p class="credits-h">My credits</p><dl><dt>Brand identity</dt><dd>I led the identity from the logo lockups to the navy, grey and stone palette and the infographic icon set.</dd><dt>Guidelines</dt><dd>I built the brand guidelines and the document, brochure and social templates that let JIFA&#x27;s own team apply the brand consistently.</dd></dl></div>
+      <div class="media g2">
+        <figure class="full"><img src="img/jifa-1.webp" width="1400" height="788" alt="JIFA brand guide cover with classical columns" loading="lazy"></figure>
+        <figure><img src="img/jifa-2.webp" width="1400" height="788" alt="JIFA primary and associate logos" loading="lazy"></figure>
+        <figure><img src="img/jifa-3.webp" width="1400" height="788" alt="JIFA brand palette" loading="lazy"></figure>
+        <figure><img src="img/jifa-4.webp" width="1400" height="788" alt="JIFA infographic icon set" loading="lazy"></figure>
+        <figure><img src="img/jifa-7.webp" width="1400" height="788" alt="JIFA tone of imagery" loading="lazy"></figure>
+        <figure><img src="img/jifa-8.webp" width="1400" height="788" alt="JIFA document cover layouts" loading="lazy"></figure>
+        <figure><img src="img/jifa-6.webp" width="1400" height="788" alt="JIFA social media templates" loading="lazy"></figure>
+        <figure class="full"><img src="img/jifa-9.webp" width="1400" height="788" alt="JIFA brand image with a library of busts and books" loading="lazy"></figure>
+      </div>
+    </article>
+
+    <!-- Air France -->
+    <article class="case" id="airfrance" data-cat="brand" aria-labelledby="af-h">
+      <div class="case-head" data-reveal>
+        <div>
+          <h3 class="case-title" id="af-h"><span class="case-client">Air France</span>Decades of Connection</h3>
+          <dl class="facts"><dt>Role</dt><dd>Creative Lead, event identity and activation</dd><dt>Date</dt><dd>14 June 2023, Joburg Theatre</dd><dt>Output</dt><dd>Poster series, boarding-pass invitation, AV boards, stickers</dd><dt>Extension</dt><dd>Air France 90 years of elegance activation, October 2023</dd></dl>
+        </div>
+        <div class="story">
+          <p>To mark 70 years of direct Air France flights between Paris and Johannesburg, Migration created Decades of Connection, a one-night-only theatrical performance at the Joburg Theatre that took the audience through seven decades of connection between Air France and South Africa. The film captures the night, from the printed programme and arrivals to the performance itself.</p>
+          <p>I designed the event's identity, including a poster series in which a staircase sweeps up into the curve of an aircraft tail and a boarding-pass invitation for the Paris to Johannesburg route, so guests held a piece of the journey before the night began.</p>
+          <p>The identity then travelled into Air France's 90th anniversary. For the 90 years of elegance activation I designed the Play and Win AV boards and stickers that invited guests to answer a few questions for a chance to win return flights to Paris, with a discount code so that everyone left a winner.</p>
+        </div>
+      </div>
+      <div class="credits"><p class="credits-h">My credits</p><dl><dt>Event identity</dt><dd>I designed the Decades of Connection identity, including the poster idea of a staircase sweeping up into an aircraft tail.</dd><dt>Invitation</dt><dd>I turned the invitation into a Paris to Johannesburg boarding pass, so guests held a piece of the journey before the night.</dd><dt>Extension</dt><dd>I carried the identity into Air France&#x27;s 90th anniversary with the Play and Win AV boards and stickers.</dd></dl></div>
+      <div class="media">
+        <figure class="a169" style="background:#0b1a4a"><video controls playsinline preload="none" poster="img/af-decades-poster.webp" aria-label="Decades of Connection event film"><source src="img/af-decades.webm" type="video/webm"><source src="img/af-decades.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="media g4" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure><img src="img/af-poster-1.webp" width="1200" height="1676" alt="Decades of Connection poster with a woman in a red dress on a staircase" loading="lazy"></figure>
+        <figure><img src="img/af-poster-2.webp" width="1200" height="1676" alt="Decades of Connection poster variation" loading="lazy"></figure>
+        <figure><img src="img/af-poster-3.webp" width="1200" height="1676" alt="Decades of Connection poster with a traveller climbing the stairs" loading="lazy"></figure>
+        <figure><img src="img/af-poster-4.webp" width="1200" height="1676" alt="Decades of Connection typographic poster" loading="lazy"></figure>
+        <figure class="full" style="aspect-ratio:21/9"><img src="img/af-pass.webp" width="1200" height="1129" alt="Air France boarding-pass invitation from CDG to JHB" loading="lazy"></figure>
+      </div>
+      <div class="media g2 stack" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure class="a169"><img src="img/af90-logo.webp" width="1600" height="900" alt="Air France 90 years of elegance AV board" loading="lazy"></figure>
+        <figure class="a169" style="background:#0b1a4a"><img src="img/af90-sticker.webp" width="1400" height="1020" alt="Decades of Connection sticker: stand a chance to win free flights to Paris" loading="lazy" style="object-fit:contain"></figure>
+        <figure class="a169"><img src="img/af90-play.webp" width="1600" height="900" alt="Play and Win AV board" loading="lazy"></figure>
+        <figure class="a169"><img src="img/af90-winner.webp" width="1600" height="900" alt="Everyone is a winner AV board" loading="lazy"></figure>
+      </div>
+    </article>
+
+    <!-- Hill Country -->
+    <article class="case" id="hillcountry" data-cat="craft" aria-labelledby="hc-h">
+      <div class="case-head">
+        <div>
+          <h3 class="case-title" id="hc-h"><span class="case-client">Lwazi Loyiso Qhama Dekeda · AI-led book cover</span>Formed to Take the Hill Country</h3>
+          <dl class="facts"><dt>Role</dt><dd>Cover design and art direction</dd><dt>Year</dt><dd>2026</dd><dt>Format</dt><dd>A5 trade paperback, front, 12 mm spine and back</dd><dt>Process</dt><dd>Mood board site, directions site, final artwork site, print-ready PDF</dd><dt>AI</dt><dd>Concept imagery, mock-ups and the three client sites</dd></dl>
+        </div>
+        <div class="story">
+          <p>Formed to Take the Hill Country weaves the author's story with four generations of a South African family, and his brief was simple: hand him the book rather than a style, because he would rather be surprised by something true than comforted by something expected.</p>
+          <p>This is my most recent AI-led project. I used AI to explore each creative world quickly, generating mood imagery, concept renders and realistic book mock-ups, and built three interactive presentation sites so the author could review every stage on his phone or laptop. The judgement stayed human: every direction starts from a line in the manuscript.</p>
+          <p>I started with a round-one mood board of four creative worlds, each with its own imagery, tones and typography, which the author could star and annotate as he went. That narrowed into three complete directions, each beginning from a different sentence in the manuscript. The Relief is a contour pressed into bone-coloured stock, Nec Tamen Consumebatur returns the burning bush from his grandfather's granite headstone to the high ground, and Out of the Rock sends a single shoot up through split stone. Every direction was carried across the front, spine and back, and shown as flat artwork, at thumbnail size and as a physical book.</p>
+          <p>The author chose Nec Tamen Consumebatur, Latin for "yet it was not consumed". I resolved it into a cover built like an old hymnbook, with cream stock, an ornamental double frame and a burning-bush seal at its centre, then delivered print-ready artwork tested on a retail shelf and down to a 56-pixel thumbnail.</p>
+        </div>
+      </div>
+      <div class="results">
+        <div><b>4</b><span>creative worlds in the round-one mood board</span></div>
+        <div><b>3</b><span>complete cover directions, front to back</span></div>
+        <div><b>3</b><span>interactive client sites, built with AI</span></div>
+        <div><b>56px</b><span>smallest thumbnail tested for legibility</span></div>
+      </div>
+      <div class="credits"><p class="credits-h">My credits</p><dl><dt>Concept</dt><dd>I built four creative worlds and three cover directions, each starting from a line in the manuscript.</dd><dt>AI workflow</dt><dd>I used AI to generate mood imagery, concept renders and book mock-ups, and built the three client review sites myself.</dd><dt>Design</dt><dd>I designed the final front, spine and back, then prepared the print-ready artwork and tested it down to a 56-pixel thumbnail.</dd><dt>Client</dt><dd>I ran every review with the author through the sites, which let him annotate and choose on his own time.</dd></dl></div>
+      <p class="subhead">The process, as three client sites</p>
+      <div class="process">
+        <a class="step" href="https://ninosekeleni.github.io/Moodboard---Formed-to-Take-the-Hill-Country/" target="_blank" rel="noopener">
+          <figure><img src="img/hc-site-moodboard.webp" width="1600" height="1000" alt="Mood board site for Formed to Take the Hill Country" loading="lazy"></figure>
+          <span class="n">01 · July 2026</span><b>Mood board</b><span class="d">Four creative worlds with imagery, tones and type. The author starred images and left notes as he went.</span><span class="go">Open the site ↗</span></a>
+        <a class="step" href="https://ninosekeleni.github.io/FTTTHC-book-covers/" target="_blank" rel="noopener">
+          <figure><img src="img/hc-site-directions.webp" width="1600" height="1000" alt="Cover directions site" loading="lazy"></figure>
+          <span class="n">02 · August 2026</span><b>Three directions</b><span class="d">Each direction shown front, spine and back, at thumbnail size and as a physical book.</span><span class="go">Open the site ↗</span></a>
+        <a class="step" href="https://ninosekeleni.github.io/Formed-to-Take-the-Hill-Country-Book-Cover/" target="_blank" rel="noopener">
+          <figure><img src="img/hc-site-final.webp" width="1600" height="1000" alt="Final cover site with an interactive 3D book" loading="lazy"></figure>
+          <span class="n">03 · August 2026</span><b>Final cover</b><span class="d">The chosen cover as print-ready artwork, an interactive 3D book and a retail shelf test.</span><span class="go">Open the site ↗</span></a>
+      </div>
+      <p class="subhead">Three directions</p>
+      <div class="media g3">
+        <figure style="aspect-ratio:700/982"><img src="img/hc-d1-front.webp" width="700" height="982" alt="Direction one, The Relief: black contour marks on bone-coloured stock" loading="lazy"></figure>
+        <figure style="aspect-ratio:700/982"><img src="img/hc-d2-front.webp" width="700" height="982" alt="Direction two, Nec Tamen Consumebatur: a burning bush on a hilltop at dusk" loading="lazy"></figure>
+        <figure style="aspect-ratio:700/982"><img src="img/hc-d3-front.webp" width="700" height="982" alt="Direction three, Out of the Rock: a golden shoot rising from split stone" loading="lazy"></figure>
+        <figure style="aspect-ratio:5/7"><img src="img/hc-d1-mock.webp" width="900" height="1260" alt="The Relief shown as a physical book" loading="lazy"></figure>
+        <figure style="aspect-ratio:5/7"><img src="img/hc-d2-mock.webp" width="900" height="1260" alt="Nec Tamen Consumebatur shown as a physical book" loading="lazy"></figure>
+        <figure style="aspect-ratio:5/7"><img src="img/hc-d3-mock.webp" width="900" height="1265" alt="Out of the Rock shown as a physical book" loading="lazy"></figure>
+      </div>
+      <p class="subhead">The final cover</p>
+      <div class="media">
+        <figure style="aspect-ratio:2000/1363;background:#fff"><img src="img/hc-final-spread.webp" width="2000" height="1363" alt="Final cover artwork across back, spine and front, with an ornamental frame and a burning-bush seal" loading="lazy" style="object-fit:contain"></figure>
+      </div>
+    </article>
+
+    <!-- Harmony -->
+    <article class="case" id="harmony" data-cat="craft" aria-labelledby="har-h">
+      <div class="case-head" data-reveal>
+        <div>
+          <h3 class="case-title" id="har-h"><span class="case-client">Harmony Gold</span>Mining with Purpose</h3>
+          <dl class="facts"><dt>Role</dt><dd>Creative Lead, design</dd><dt>Years</dt><dd>2023 to 2024</dd><dt>Output</dt><dd>Results campaign, Mining Indaba speakers, social, 16 Days of Activism posters</dd></dl>
+        </div>
+        <div class="story">
+          <p>For Harmony Gold I designed communication that carries the company's Mining with Purpose message into every format it needs.</p>
+          <p>The work ranged from a results campaign built on FY23 community investment figures to speaker announcements for Investing in African Mining Indaba sessions and a Youth Day series for social, all held together by Harmony's red and a confident, people-first photographic style.</p>
+          <p>For 16 Days of Activism against gender-based violence I designed a series of five posters in a stark black-and-white illustration style, each pairing a single powerful image with a direct call to speak up, support survivors and end the violence.</p>
+        </div>
+      </div>
+      <div class="credits"><p class="credits-h">My credits</p><dl><dt>Creative direction</dt><dd>I led Harmony&#x27;s Mining with Purpose communication across the results campaign, Mining Indaba speaker announcements and social.</dd><dt>Art direction</dt><dd>I art-directed the 16 Days of Activism series, choosing a stark black-and-white illustration style so each poster carried one image and one call to act.</dd></dl></div>
+      <div class="media g3">
+        <figure class="span2" style="aspect-ratio:2/1"><img src="img/harmony-hero.webp" width="1400" height="932" alt="Harmony Gold mineworkers smiling in hard hats" loading="lazy"></figure>
+        <figure style="aspect-ratio:1/1"><img src="img/harmony-cop28.webp" width="1400" height="1394" alt="Harmony speaker card: What COP28 means for mining" loading="lazy"></figure>
+        <figure style="aspect-ratio:16/9"><img src="img/harmony-youth-red.webp" width="1400" height="787" alt="Youth Day post: You have the power to change the narrative" loading="lazy"></figure>
+        <figure style="aspect-ratio:16/9"><img src="img/harmony-youth-blue.webp" width="1400" height="787" alt="Youth Day post: You have it in you to build towards a bright future" loading="lazy"></figure>
+        <figure style="aspect-ratio:16/9"><img src="img/harmony-youth-orange.webp" width="1400" height="783" alt="Happy National Youth Day post" loading="lazy"></figure>
+      </div>
+      <p class="subhead">16 Days of Activism poster series <small>Scroll sideways</small></p>
+      <div class="feed posters" tabindex="0" aria-label="16 Days of Activism posters">
+        <figure><img src="img/harmony-16d-1.webp" width="900" height="1273" alt="Poster: Empower women, end violence" loading="lazy"></figure>
+        <figure><img src="img/harmony-16d-2.webp" width="900" height="1273" alt="Poster: Break the silence, stop the violence" loading="lazy"></figure>
+        <figure><img src="img/harmony-16d-3.webp" width="900" height="1273" alt="Poster: Love shouldn't hurt" loading="lazy"></figure>
+        <figure><img src="img/harmony-16d-4.webp" width="900" height="1273" alt="Poster: Equality begins with respect" loading="lazy"></figure>
+        <figure><img src="img/harmony-16d-5.webp" width="900" height="1273" alt="Poster: Support survivors, end violence" loading="lazy"></figure>
+      </div>
+    </article>
+
+    <!-- Petra -->
+    <article class="case" id="petra" data-cat="craft" aria-labelledby="pet-h">
+      <div class="case-head" data-reveal>
+        <div>
+          <h3 class="case-title" id="pet-h"><span class="case-client">Petra Diamonds</span>Purpose Statement</h3>
+          <dl class="facts"><dt>Role</dt><dd>Creative Lead, illustrated animation</dd><dt>Years</dt><dd>2022 to 2023</dd><dt>Series</dt><dd>Four films on Petra's purpose and culture code</dd><dt>Languages</dt><dd>English and Swahili</dd><dt>Audience</dt><dd>Employees and stakeholders</dd></dl>
+        </div>
+        <div class="story">
+          <p>Petra Diamonds needed to explain its purpose statement in a way people would actually sit and watch.</p>
+          <p>The film follows two miners, Ms Petra and safety officer Thibela Kotsi, as they unpack what "creating abundance from rarity" means for Petra's people, communities, investors and customers. It moves from underground to the world above in a bright, faceted illustration style that nods to the stones themselves.</p>
+          <p>It opened a four-film series that went on to explain Petra's culture code icons and positioning, with every film adapted into Swahili for its Tanzanian operation. Getting the details right mattered to a mining audience, so each round of boards was checked against how Petra's people actually dress and work, down to which protective gear is worn in the office and which is worn in the plant.</p>
+        </div>
+      </div>
+      <div class="credits"><p class="credits-h">My credits</p><dl><dt>Art direction</dt><dd>I art-directed and illustrated the series, from the two miner characters to the underground and above-ground worlds.</dd><dt>Storyboards</dt><dd>I designed the animation boards for every film and adapted them into Swahili for Petra&#x27;s operations in Tanzania.</dd><dt>Series</dt><dd>I led a four-film Culture Code and Purpose series for Petra, of which this is the opening film.</dd><dt>Direction</dt><dd>I briefed and directed the animation studio through to final, working through the client&#x27;s safety and brand feedback.</dd><dt>With</dt><dd>Migration&#x27;s design and copy team, with FORT on animation.</dd></dl></div>
+      <div class="media">
+        <figure class="a169" style="background:#0e2a4f"><video controls playsinline preload="none" poster="img/petra-film-poster.webp" aria-label="Petra Diamonds Purpose Statement animated film"><source src="img/petra-film.webm" type="video/webm"><source src="img/petra-film.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="media g3" style="margin-top:clamp(8px,1.2vw,16px)">
+        <figure><img src="img/petra-1.webp" width="1400" height="788" alt="Two animated miners talking underground" loading="lazy"></figure>
+        <figure><img src="img/petra-5.webp" width="1400" height="788" alt="People frame of the animation" loading="lazy"></figure>
+        <figure><img src="img/petra-6.webp" width="1400" height="788" alt="Communities frame with graduation caps in the air" loading="lazy"></figure>
+        <figure><img src="img/petra-7.webp" width="1400" height="787" alt="Investors frame with a coin and city buildings" loading="lazy"></figure>
+        <figure><img src="img/petra-8.webp" width="1400" height="786" alt="Customers frame with diamond jewellery" loading="lazy"></figure>
+        <figure><img src="img/petra-9.webp" width="1400" height="786" alt="Purpose Statement title card in a mine" loading="lazy"></figure>
+      </div>
+    </article>
+
+    <!-- Migration -->
+    <article class="case" id="migration" data-cat="craft" aria-labelledby="mig-h">
+      <div class="case-head" data-reveal>
+        <div>
+          <h3 class="case-title" id="mig-h"><span class="case-client">Migration</span>Studio website</h3>
+          <dl class="facts"><dt>Role</dt><dd>Creative Lead, UX/UI design</dd><dt>Scope</dt><dd>Wireframes, responsive layouts, navigation</dd></dl>
+        </div>
+        <div class="story">
+          <p>I've worked on a range of UX/UI projects, and the Migration website shows how I approach them, starting from wireframes and building towards layouts that are easy to move through and good to look at.</p>
+          <p>The site pairs a bold, black full-screen menu built around the studio's M with editorial pages for work, services and news. Working with the team and listening to user feedback helped me balance aesthetics with function so the site stays usable on every screen.</p>
+        </div>
+      </div>
+      <div class="credits"><p class="credits-h">My credits</p><dl><dt>UX</dt><dd>I planned the structure and navigation, from wireframes through to responsive layouts.</dd><dt>UI</dt><dd>I art-directed the black full-screen menu built around the studio&#x27;s M and the editorial pages for work, services and news.</dd><dt>Testing</dt><dd>I refined the site with the team using user feedback, balancing how it looks with how easily it moves.</dd></dl></div>
+      <div class="media g4 ux">
+        <figure class="span2" style="aspect-ratio:1400/793"><img src="img/ux-hero.webp" width="1400" height="793" alt="Migration website work tiles" loading="lazy"></figure>
+        <figure class="span2" style="aspect-ratio:1400/793"><img src="img/ux-about.webp" width="1400" height="793" alt="Migration website about section" loading="lazy"></figure>
+        <figure class="tall" style="aspect-ratio:755/1151"><img src="img/ux-nav-1.webp" width="755" height="1151" alt="Mobile menu with Home selected" loading="lazy"></figure>
+        <figure class="tall" style="aspect-ratio:755/1151"><img src="img/ux-nav-2.webp" width="755" height="1151" alt="Mobile menu with About selected" loading="lazy"></figure>
+        <figure class="tall" style="aspect-ratio:755/1151"><img src="img/ux-nav-3.webp" width="755" height="1151" alt="Mobile menu with Services selected" loading="lazy"></figure>
+        <figure class="tall" style="aspect-ratio:755/1151"><img src="img/ux-news.webp" width="1400" height="955" alt="Migration news page" loading="lazy" style="object-fit:cover;object-position:0 0"></figure>
+      </div>
+    </article>
+  </div>
+
+  <!-- About -->
+  <div class="paper">
+    <section class="sec wrap" id="about" aria-labelledby="about-h">
+      <div class="sec-head" data-reveal><h2 id="about-h">About</h2><p>Creative director, art director and creative strategist, based in Johannesburg and working with brands across Africa, EMEA and beyond.</p></div>
+      <div class="about-grid">
+        <figure><img src="img/portrait-suit.webp" width="1200" height="1349" alt="Black and white portrait of Nino Sekeleni in a suit" loading="lazy"></figure>
+        <div class="about-copy">
+          <p>I lead from the work, I care about the craft, and I push for creative that is sharp enough to stand out and grounded enough to deliver.</p>
+          <p>Today I lead creative at Migration as Senior Art Director and Creative Strategist, overseeing campaign development across digital, social, print and experiential channels for clients such as Visa, Cricket South Africa and Lions Cricket. Before Migration I worked at BET.co.za, Soccer Laduma and KickOff, which gave me the range to move from big-brand strategy to fast-turnaround content without losing quality at either end.</p>
+          <p>I trained in film at AFDA, where I earned a BA Honours in Motion Picture Medium, and that grounding in storytelling and production still shapes how I run a project from strategy and concept through to production, performance tracking and stakeholder reporting.</p>
+          <p>AI is now part of how I work every day. I use it to research, concept, write, generate and art-direct imagery, and build working products, and I led the proposal to bring Claude into Migration's toolkit. In my talk Beyond the Prompt I argue that when everyone has the same tools, what sets the work apart is judgement and taste, which is exactly where I focus.</p>
+          <p>Collaboration sits at the heart of how I work. I've spent years coordinating designers, content creators, strategists and account teams, and I'm at my best when a whole team is pulling towards one clear idea.</p>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div><b>10</b><span>years across creative strategy, art direction and design</span></div>
+        <div><b>2×</b><span>Sport Organisation of the Year with Lions Cricket, in 2023 and 2024</span></div>
+        <div><b>8×</b><span>social audience growth at Soccer Laduma and KickOff, from about 500K to 4M</span></div>
+        <div><b>4</b><span>seasons leading brand and campaign creative for Lions Cricket</span></div>
+      </div>
+
+      <div class="caps">
+        <div><h3>Creative leadership</h3><ul><li>Creative direction</li><li>Concept development</li><li>Multi-channel storytelling</li><li>Pitching</li><li>Team coaching</li><li>Production oversight</li></ul></div>
+        <div><h3>Design and art direction</h3><ul><li>Brand identity</li><li>Visual and design systems</li><li>UI/UX prototyping</li><li>Motion</li><li>Production design</li><li>Accessibility</li></ul></div>
+        <div><h3>Marketing and performance</h3><ul><li>Campaign orchestration</li><li>Performance analysis (CAC, LTV, ROAS)</li><li>Paid media optimisation</li><li>CRO and SEO fundamentals</li><li>Executive reporting</li></ul></div>
+        <div><h3>Brand management</h3><ul><li>Brand positioning</li><li>Messaging governance</li><li>Go-to-market planning</li><li>Social listening</li><li>Partnership management</li></ul></div>
+      </div>
+      <div class="sec-head" style="margin-top:clamp(4rem,8vw,6rem);margin-bottom:0" data-reveal><h2 id="tools-h" style="font-size:var(--step-3)">Toolkit</h2><p>The software I use every week, from design and generative AI to paid media, publishing and project management.</p></div>
+      <dl class="toolkit" aria-labelledby="tools-h">
+        <div data-reveal><dt>Design and creative</dt><dd><ul><li>Photoshop</li><li>Illustrator</li><li>InDesign</li><li>Premiere Pro</li><li>Figma</li><li>Canva</li><li>Frame.io</li></ul></dd></div>
+        <div data-reveal><dt>AI and generative</dt><dd><ul><li>Claude</li><li>ChatGPT</li><li>Adobe Firefly</li><li>Midjourney</li><li>Google AI Studio</li><li>Runway</li><li>Kling AI</li><li>Sora</li></ul></dd></div>
+        <div data-reveal><dt>Paid media and analytics</dt><dd><ul><li>Google Ads</li><li>Meta Ads Manager</li><li>TikTok Ads Manager</li><li>LinkedIn Campaign Manager</li><li>YouTube Studio</li><li>Google Analytics 4</li></ul></dd></div>
+        <div data-reveal><dt>Social and publishing</dt><dd><ul><li>Meta Business Suite</li><li>Hootsuite</li><li>Buffer</li><li>Sprout Social</li><li>TikTok Business Suite</li></ul></dd></div>
+        <div data-reveal><dt>Presentation and docs</dt><dd><ul><li>Keynote</li><li>PowerPoint</li><li>Google Slides</li><li>Google Workspace</li></ul></dd></div>
+        <div data-reveal><dt>Workflow</dt><dd><ul><li>Asana</li><li>Monday.com</li><li>Slack</li><li>Dropbox</li><li>Google Drive</li></ul></dd></div>
+      </dl>
+    </section>
+
+    <!-- Experience -->
+    <section class="sec wrap cv" id="experience" aria-labelledby="exp-h">
+      <div class="sec-head" data-reveal><h2 id="exp-h">Experience</h2><p>The short version of my CV. The full document is a click away if you'd like the detail.</p></div>
+      <ul class="roles-list">
+        <li><span class="when">May 2022 – present</span><h3>Creative Lead, Senior Art Director and Creative Strategist<span class="org">Migration</span></h3><p>I lead creative direction and campaign development across digital, social, print and experiential channels, from Visa's global sports platforms to Cricket South Africa's Woza Nawe brand campaign and four seasons of Lions Cricket.</p></li>
+        <li><span class="when">June 2021 – May 2022</span><h3>Senior and Lead Multimedia Designer<span class="org">BET.co.za</span></h3><p>I led on-brand, performance-focused creative for social and on-site placements, working with marketing, product, trading and compliance teams to turn campaigns and odds-led moments into conversion-ready visuals.</p></li>
+        <li><span class="when">Sept 2018 – May 2021</span><h3>Creative and Social Media Lead<span class="org">Soccer Laduma and KickOff</span></h3><p>I grew the combined social following from about 500K to 4M, co-created and launched the Soccer Laduma Podcast, and supported the newspaper and magazine with layout, image editing and headline hierarchy.</p></li>
+        <li><span class="when">Nov 2017 – Sept 2018</span><h3>Storyboard Artist<span class="org">Strika Entertainment</span></h3><p>I adapted the Supa Strikas comic into animation-ready storyboards with an international production partner, delivering to Disney XD broadcast standards.</p></li>
+        <li><span class="when">Mar 2016 – June 2017</span><h3>Production Assistant Intern<span class="org">Tshedza Media</span></h3><p>I supported production from shoot schedules and call sheets to equipment tracking and on-set liaison, helping productions run on time and on budget.</p></li>
+      </ul>
+      <div class="extra" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+        <div><h3>Education</h3><p><strong>BA Honours in Motion Picture Medium</strong>, AFDA, 2015 to 2016, specialising in media production and technology.</p><p style="margin-top:.6rem"><strong>BA in Motion Picture Medium</strong>, AFDA, 2012 to 2015, specialising in media production.</p></div>
+        <div><h3>Recognition</h3><p><strong>Sport Organisation of the Year</strong>, Hollard Sport Industry Awards, with Lions Cricket in 2023 and 2024. I co-led the award submission strategy and coordinated the evidence packs and creative assets.</p></div>
+      </div>
+      <div class="actions" style="margin-top:2.5rem">
+        <a class="btn solid" href="nino-sekeleni-cv.pdf" target="_blank" rel="noopener" style="background:var(--on-paper);color:var(--paper);border-color:var(--on-paper)">Download the full CV</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Contact -->
+  <section class="contact wrap" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Let's create<b>something together.</b></h2>
+    <div class="contact-row">
+      <a class="email" id="email" href="mailto:sekelenin@gmail.com?subject=Hello%20Nino" style="text-decoration:none">sekelenin@gmail.com</a>
+      <a class="btn solid" href="mailto:sekelenin@gmail.com?subject=Hello%20Nino">Email me</a>
+      <button class="copy" type="button" id="copy-email">Copy email</button>
+      <a class="btn ghost" href="https://www.linkedin.com/in/nino-sekeleni-a16b88121/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="nino-sekeleni-cv.pdf" target="_blank" rel="noopener">Download CV</a>
+    </div>
+    <footer class="foot">
+      <span>© Nino Sekeleni. Johannesburg, South Africa.</span>
+      <a href="#top" data-top>Back to top ↑</a>
+    </footer>
+  </section>
+</main>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root=document.documentElement;
+
+  // Day and night (night first; remembers the viewer's choice)
+  var modeBtn=document.getElementById('mode');
+  function setMode(day){
+    if(day)root.setAttribute('data-mode','day');else root.removeAttribute('data-mode');
+    modeBtn.setAttribute('aria-pressed',day?'true':'false');
+    modeBtn.setAttribute('aria-label',day?'Switch to night mode':'Switch to day mode');
+    modeBtn.querySelector('span').textContent=day?'Day':'Night';
+  }
+  try{if(localStorage.getItem('ns-mode')==='day')setMode(true)}catch(e){}
+  modeBtn.addEventListener('click',function(){
+    var day=root.getAttribute('data-mode')!=='day';setMode(day);
+    try{localStorage.setItem('ns-mode',day?'day':'night')}catch(e){}
+  });
+
+
+  // Back to top: jump straight there instead of scrolling the whole page
+  var totop=document.getElementById('totop');
+  function jumpTop(e){if(e)e.preventDefault();window.scrollTo({top:0,left:0,behavior:'instant'});var h=document.querySelector('.hero');if(h){h.setAttribute('tabindex','-1');h.focus({preventScroll:true})}}
+  totop.addEventListener('click',jumpTop);
+  [].forEach.call(document.querySelectorAll('[data-top]'),function(a){a.addEventListener('click',jumpTop)});
+  function showTop(){totop.classList.toggle('show',window.scrollY>window.innerHeight*1.2)}
+  window.addEventListener('scroll',showTop,{passive:true});showTop();
+
+  // Johannesburg clock
+  var clock=document.getElementById('clock');
+  function tick(){try{clock.textContent='Johannesburg '+new Intl.DateTimeFormat('en-GB',{timeZone:'Africa/Johannesburg',hour:'2-digit',minute:'2-digit'}).format(new Date())}catch(e){}}
+  tick();setInterval(tick,30000);
+
+  // Filters
+  var buttons=[].slice.call(document.querySelectorAll('.filters button'));
+  var rows=[].slice.call(document.querySelectorAll('#index li'));
+  var cases=[].slice.call(document.querySelectorAll('.case'));
+  buttons.forEach(function(b){b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');
+    buttons.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    rows.concat(cases).forEach(function(el){el.hidden=!(f==='all'||el.getAttribute('data-cat')===f)});
+  })});
+
+  // Case navigation: tabs, All work overlay, previous and next, J and K
+  (function(){
+    var top=document.querySelector('.top'),casesWrap=document.getElementById('cases');
+    var arts=[].slice.call(document.querySelectorAll('article.case'));
+    var tabs=[].slice.call(document.querySelectorAll('#rail-tabs a'));
+    var tabBox=document.getElementById('rail-tabs'),rail=document.getElementById('rail');
+    var prevB=document.getElementById('rail-prev'),nextB=document.getElementById('rail-next');
+    var overlay=document.getElementById('worknav'),grid=document.getElementById('worknav-grid');
+    var current=null,lastFocus=null,curTone=null;
+    function visible(){return arts.filter(function(a){return !a.hidden})}
+    function headH(){return top?top.offsetHeight:60}
+    function jump(id){
+      var el=document.getElementById(id);if(!el)return;
+      if(top)top.classList.add('in-cases');
+      var y=el.getBoundingClientRect().top+window.scrollY-(top?60:0)-(rail?50:0)+1;
+      window.scrollTo({top:y,behavior:'instant'});
+      try{history.replaceState(null,'','#'+id)}catch(e){}
+      setCurrent(id);
+    }
+    function setCurrent(id){
+      if(id===current)return;current=id;
+      tabs.forEach(function(t){
+        var on=t.getAttribute('data-case')===id;
+        if(on){t.setAttribute('aria-current','true');tabBox.scrollTo({left:t.offsetLeft-tabBox.clientWidth/2+t.offsetWidth/2,behavior:'smooth'})}
+        else t.removeAttribute('aria-current');
+      });
+      var v=visible(),i=v.findIndex(function(a){return a.id===id});
+      if(prevB)prevB.disabled=i<=0; if(nextB)nextB.disabled=i<0||i>=v.length-1;
+    }
+    function step(d){
+      var v=visible();if(!v.length)return;
+      var i=v.findIndex(function(a){return a.id===current});
+      if(i<0){var y=window.scrollY;i=-1;v.forEach(function(a,k){if(a.offsetTop<=y+200)i=k})}
+      var n=Math.max(0,Math.min(v.length-1,i+d));jump(v[n].id);
+    }
+    tabs.forEach(function(t){t.addEventListener('click',function(e){e.preventDefault();jump(t.getAttribute('data-case'))})});
+    if(prevB)prevB.addEventListener('click',function(){step(-1)});
+    if(nextB)nextB.addEventListener('click',function(){step(1)});
+    // index list also jumps instantly
+    [].forEach.call(document.querySelectorAll('#index a[href^="#"]'),function(a){a.addEventListener('click',function(e){e.preventDefault();jump(a.getAttribute('href').slice(1))})});
+    // show the tabs while inside the case studies, and track the current case
+    function onScroll(){
+      if(!casesWrap||!top)return;
+      var tone=null,mid=window.innerHeight*0.5;
+      visible().forEach(function(a){var b=a.getBoundingClientRect();if(b.top<=mid&&b.bottom>mid)tone=a.id});
+      if(tone!==curTone){curTone=tone;if(tone)document.documentElement.setAttribute('data-case',tone);else document.documentElement.removeAttribute('data-case')}
+      var r=casesWrap.getBoundingClientRect(),inside=r.top<120&&r.bottom>200;
+      top.classList.toggle('in-cases',inside);
+      if(rail)rail.setAttribute('aria-hidden',inside?'false':'true');
+      if(!inside)return;
+      var mark=window.innerHeight*0.35,id=null;
+      visible().forEach(function(a){if(a.getBoundingClientRect().top<=mark)id=a.id});
+      if(id)setCurrent(id);
+    }
+    var tk=false;window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;onScroll()})}},{passive:true});
+    onScroll();
+    // previous and next at the end of each case
+    function buildSteps(){
+      var v=visible();
+      arts.forEach(function(a){var s=a.querySelector('.case-step');if(s)s.remove()});
+      v.forEach(function(a,i){
+        var p=v[i-1],n=v[i+1],nav=document.createElement('nav');
+        nav.className='case-step';nav.setAttribute('aria-label','More case studies');
+        function name(x){var t=x.querySelector('.case-title');var c=t.querySelector('.case-client');return {c:c?c.textContent:'',t:t.textContent.replace(c?c.textContent:'','').trim()}}
+        nav.innerHTML=(p?'<a href="#'+p.id+'" data-j="'+p.id+'">&#8592; Previous<b>'+name(p).t+'</b></a>':'<span></span>')+
+          '<button type="button" class="mid" data-all>All work</button>'+
+          (n?'<a class="nx" href="#'+n.id+'" data-j="'+n.id+'">Next &#8594;<b>'+name(n).t+'</b></a>':'<span></span>');
+        a.appendChild(nav);
+      });
+    }
+    document.addEventListener('click',function(e){
+      var j=e.target.closest&&e.target.closest('[data-j]');if(j){e.preventDefault();jump(j.getAttribute('data-j'));return}
+      var al=e.target.closest&&e.target.closest('[data-all]');if(al){e.preventDefault();openNav()}
+    });
+    // All work overlay, built from the index so it always matches
+    var k=0;
+    [].forEach.call(document.querySelectorAll('#index li'),function(li){
+      if(li.classList.contains('grp')){var g=document.createElement('li');g.className='wn-grp';g.setAttribute('data-cat',li.getAttribute('data-cat'));g.textContent=li.textContent;grid.appendChild(g);return}
+      var a=li.querySelector('a'),img=li.querySelector('img');k++;
+      var item=document.createElement('li');item.setAttribute('data-cat',li.getAttribute('data-cat'));
+      item.innerHTML='<a href="'+a.getAttribute('href')+'"><span class="th"><img src="'+img.getAttribute('src')+'" alt="" loading="lazy"'+(img.getAttribute('style')?' style="'+img.getAttribute('style')+'"':'')+'></span><span class="n">'+(k<10?'0':'')+k+' · '+li.querySelector('.d').textContent+'</span><span class="t">'+li.querySelector('.t').textContent+'</span><span class="c">'+li.querySelector('.c').textContent+'</span></a>';
+      item.querySelector('a').addEventListener('click',function(e){e.preventDefault();closeNav();jump(a.getAttribute('href').slice(1))});
+      grid.appendChild(item);
+    });
+    function openNav(){
+      lastFocus=document.activeElement;
+      var pb=document.querySelector('.filters button[aria-pressed="true"]'),on=pb?pb.getAttribute('data-f'):'all';
+      [].forEach.call(grid.children,function(li){
+        if(li.classList.contains('wn-grp')){li.hidden=!(on==='all'||li.getAttribute('data-cat')===on);return}
+        var id=li.querySelector('a').getAttribute('href').slice(1),art=document.getElementById(id);
+        li.hidden=!!(art&&art.hidden);
+        li.querySelector('a').classList.toggle('is-current',id===current);
+      });
+      overlay.hidden=false;document.body.classList.add('nav-open');
+      document.getElementById('worknav-x').focus();
+    }
+    function closeNav(){overlay.hidden=true;document.body.classList.remove('nav-open');if(lastFocus&&lastFocus.focus)lastFocus.focus()}
+    document.getElementById('rail-all').addEventListener('click',openNav);
+    document.getElementById('worknav-x').addEventListener('click',closeNav);
+    overlay.addEventListener('click',function(e){if(e.target===overlay)closeNav()});
+    document.addEventListener('keydown',function(e){
+      if(!overlay.hidden&&e.key==='Escape'){closeNav();return}
+      var tag=(e.target.tagName||'').toLowerCase();
+      if(e.metaKey||e.ctrlKey||e.altKey||tag==='input'||tag==='textarea'||tag==='select'||e.target.isContentEditable)return;
+      if(e.key==='j'||e.key==='J'){step(1)}else if(e.key==='k'||e.key==='K'){step(-1)}
+      else if((e.key==='w'||e.key==='W')&&overlay.hidden){openNav()}
+    });
+    // keep tabs and steps in sync with the filters
+    [].forEach.call(document.querySelectorAll('.filters button'),function(b){b.addEventListener('click',function(){
+      setTimeout(function(){
+        tabs.forEach(function(t){var a=document.getElementById(t.getAttribute('data-case'));t.hidden=!!(a&&a.hidden)});
+        var f=b.getAttribute('data-f');[].forEach.call(document.querySelectorAll('.rail-grp'),function(g){g.hidden=!(f==='all'||g.getAttribute('data-cat')===f)});
+        buildSteps();current=null;onScroll();
+      },0);
+    })});
+    buildSteps();
+    if(location.hash&&document.getElementById(location.hash.slice(1))&&document.getElementById(location.hash.slice(1)).classList.contains('case')){setTimeout(function(){jump(location.hash.slice(1))},60)}
+  })();
+
+  // Copy buttons
+  function wireCopy(btn,text,label){
+    btn.addEventListener('click',function(){
+      function done(){btn.textContent='Copied';setTimeout(function(){btn.textContent=label},1800)}
+      function fallback(){btn.textContent=text}
+      try{navigator.clipboard.writeText(text).then(done,fallback)}catch(e){fallback()}
+    });
+  }
+  var ce=document.getElementById('copy-email');if(ce)wireCopy(ce,'sekelenin@gmail.com','Copy email');
+  [].forEach.call(document.querySelectorAll('[data-copy]'),function(b){wireCopy(b,b.getAttribute('data-copy'),b.textContent)});
+
+
+
+  // Count numbers up as they scroll into view
+  if(!reduce&&'IntersectionObserver' in window){
+    var nums=[].slice.call(document.querySelectorAll('.results b:not(.txt), .stats b, .proof-grid b')).filter(function(el){
+      return /^([R$+]?)([\d,]*\.?\d+)(.*)$/.test(el.textContent.trim())&&el.getBoundingClientRect().top>window.innerHeight;});
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;cio.unobserve(e.target);
+      var el=e.target,m=el.textContent.trim().match(/^([R$+]?)([\d,]*\.?\d+)(.*)$/);
+      var pre=m[1],raw=m[2],suf=m[3],end=parseFloat(raw.replace(/,/g,'')),dec=(raw.split('.')[1]||'').length,comma=raw.indexOf(',')>-1,t0=performance.now();
+      function f(v){var x=v.toFixed(dec);if(comma)x=Number(x).toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec});return pre+x+suf}
+      (function step(t){var k=Math.min(1,(t-t0)/1300);k=1-Math.pow(1-k,3);el.textContent=f(end*k);if(k<1)requestAnimationFrame(step);else el.textContent=pre+raw+suf})(t0);
+    })},{threshold:.6});
+    nums.forEach(function(el){cio.observe(el)});
+  }
+
+  // Progress bar and the Get in Contact pill
+
+  
+  var bar=document.getElementById('progress'),hire=document.getElementById('hire');
+  var hero=document.querySelector('.hero'),contact=document.getElementById('contact');
+  var ticking=false;
+  function frame(){
+    ticking=false;
+    var y=window.scrollY,h=document.documentElement.scrollHeight-window.innerHeight,wh=window.innerHeight;
+    if(bar)bar.style.transform='scaleX('+(h>0?y/h:0)+')';
+    if(hire&&hero){
+      var past=hero.getBoundingClientRect().bottom<0;
+      var atContact=contact&&contact.getBoundingClientRect().top<wh*0.8;
+      hire.classList.toggle('show',past&&!atContact);
+    }
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame)}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  frame();
+})();
+</script>
+
+</body>
+</html>
