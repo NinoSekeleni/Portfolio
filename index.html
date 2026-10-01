@@ -518,6 +518,44 @@ html:root[data-case]{--ink:var(--case-bg);--ink-2:var(--case-bg2);--on-ink:var(-
 .worknav-grid .c::before{content:"";display:inline-block;width:.55em;height:.55em;border-radius:50%;background:var(--case-bg);box-shadow:0 0 0 1px var(--line-ink);margin-right:.5em;vertical-align:.02em}
 .worknav-grid a:hover .th{outline:3px solid var(--case-bg);outline-offset:3px}
 .rail-tabs a:not([aria-current="true"]):hover{background:var(--case-bg);color:var(--case-fg)}
+
+/* ---------- v15: hero card with breakout portrait ---------- */
+:root{--hero-a:#141412;--hero-b:#262521;--hero-glow:rgba(239,236,230,.16)}
+:root[data-mode="day"]{--hero-a:#ece7de;--hero-b:#d8d2c6;--hero-glow:rgba(255,255,255,.7)}
+.hero{padding-block:clamp(4.5rem,8.5vw,8rem) clamp(1.5rem,3vw,2.5rem)}
+.hero-card{position:relative;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);border-radius:clamp(18px,2vw,28px);background:radial-gradient(60% 85% at 75% 75%,var(--hero-glow),transparent 70%),linear-gradient(100deg,var(--hero-a) 38%,var(--hero-b));border:1px solid var(--line-ink);min-height:clamp(520px,42vw,620px)}
+.hero-copy{padding:clamp(2.2rem,5vw,4.5rem) clamp(1.4rem,5vw,5rem);display:flex;flex-direction:column;justify-content:center;min-width:0}
+.hero-h{font-family:var(--display);font-size:clamp(2.4rem,1rem + 3.4vw,4.5rem);line-height:.98;letter-spacing:-.035em;font-weight:720;margin:0}
+.hero-h .ln{display:block;overflow:hidden;padding-bottom:.07em;white-space:nowrap}
+.hero-h .ln>span{display:block;animation:rise .9s cubic-bezier(.2,.7,.1,1) both}
+.hero-h .ln:nth-child(2)>span{animation-delay:.08s}
+.hero-h .mute{color:var(--on-ink-mute)}
+@media (prefers-reduced-motion:reduce){.hero-h .ln>span{animation:none}}
+.hero .thesis{margin-top:1.4rem;max-width:44ch;font-size:var(--step-0);line-height:1.6;color:var(--text-2);font-weight:400}
+.hero .actions{margin-top:1.8rem}
+.hero-stats{display:flex;flex-wrap:wrap;gap:1.2rem clamp(1.5rem,3.5vw,3rem);margin:2.4rem 0 0}
+.hero-stats div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:.35rem;max-width:16ch}
+.hero-stats dd{margin:0}
+.hero-stats b{font-family:var(--display);font-size:var(--step-2);font-weight:700;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.hero-stats dt{font-size:var(--step--1);color:var(--on-ink-mute);line-height:1.35}
+.hero-side{position:relative;min-width:0}
+.hero-portrait{position:absolute;margin:0;bottom:0;right:6%;width:min(86%,470px);aspect-ratio:1194/2052;max-height:calc(100% + clamp(50px,6.5vw,100px));pointer-events:none}
+.hero-portrait img{width:100%;height:100%;object-fit:contain;object-position:50% 100%;filter:contrast(1.04)}
+.hero-avail{position:absolute;right:clamp(1rem,2.4vw,2rem);bottom:clamp(1rem,2.4vw,2rem);width:min(370px,calc(100% - 2rem));display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.3rem 1.1rem;padding:1.15rem 1.25rem 1.25rem;border-radius:18px;background:rgba(18,18,16,.52);-webkit-backdrop-filter:blur(18px) saturate(1.2);backdrop-filter:blur(18px) saturate(1.2);border:1px solid rgba(255,255,255,.18);color:#f3f0ea;text-decoration:none;box-shadow:0 24px 60px rgba(0,0,0,.28)}
+.hero-avail .k{grid-column:1/-1;font-size:.78rem;color:rgba(243,240,234,.72)}
+.hero-avail b{grid-column:1;font-family:var(--display);font-size:var(--step-1);font-weight:600;letter-spacing:-.01em;line-height:1.2}
+.hero-avail .d{grid-column:1;font-size:var(--step--1);line-height:1.45;color:rgba(243,240,234,.88)}
+.hero-avail i{grid-column:2;grid-row:2/4;align-self:center;width:52px;height:52px;border-radius:12px;background:#fff;color:#111;display:grid;place-items:center;transition:transform .25s}
+.hero-avail i svg{width:18px;height:18px}
+.hero-avail:hover i{transform:translate(2px,-2px)}
+.hero-avail:focus-visible{outline-offset:4px}
+@media (max-width:900px){
+  .hero{padding-top:clamp(1.5rem,5vw,2.5rem)}
+  .hero-card{grid-template-columns:1fr;min-height:0}
+  .hero-side{height:clamp(440px,105vw,600px)}
+  .hero-portrait{height:100%;width:auto;right:auto;left:50%;transform:translateX(-50%)}
+  .hero-h .ln{white-space:normal}
+}
 </style>
 </head>
 <body>
@@ -559,23 +597,43 @@ html:root[data-case]{--ink:var(--case-bg);--ink-2:var(--case-bg2);--on-ink:var(-
 
 <main id="top">
   <section class="hero wrap" aria-label="Introduction">
-    <div class="hero-grid">
-      <div>
-        <h1 class="lockup"><span class="ln"><span class="l1">Nino</span></span><span class="ln"><span class="l2">Sekeleni</span></span></h1>
-        <ul class="roles fade-up d1"><li>Creative Director</li><li>Art Director</li><li>Creative Strategist</li><li>AI Workflows</li></ul>
-        <p class="thesis fade-up d2">I lead creative for sport, culture and financial-services brands, building campaign platforms that run for whole seasons, from Visa's global sponsorships to Cricket South Africa and the DP World Lions. Today I bring AI into every stage of that work, from the first idea to the finished campaign.</p>
-        <div class="actions fade-up d3">
+    <div class="hero-card">
+      <div class="hero-copy">
+        <h1 class="hero-h"><span class="ln"><span>Nino Sekeleni</span></span><span class="ln mute"><span>Creative Director</span></span></h1>
+        <p class="thesis fade-up d1">I lead creative for sport, culture and financial-services brands, building campaign platforms that run for whole seasons, and I bring AI into every stage of that work, from the first idea to the finished campaign.</p>
+        <div class="actions fade-up d2">
           <a class="btn solid" href="#work">See the work
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2v12M3 9l5 5 5-5"/></svg></a>
           <a class="btn ghost" href="nino-sekeleni-cv.pdf" target="_blank" rel="noopener">Download CV</a>
         </div>
+        <dl class="hero-stats fade-up d3">
+          <div><dt>Experience</dt><dd><b>10yr</b></dd></div>
+          <div><dt>Visa revenue from my campaigns in one quarter</dt><dd><b>$2.4M</b></dd></div>
+          <div><dt>Sport Organisation of the Year with Lions Cricket</dt><dd><b>2×</b></dd></div>
+        </dl>
       </div>
-      <figure class="portrait" style="margin:0">
-        <img src="img/portrait-knit.webp" width="1200" height="1350" alt="Black and white portrait of Nino Sekeleni, arms crossed, wearing a black turtleneck" fetchpriority="high">
-        <figcaption><span>Johannesburg, South Africa</span><span>Creative Lead at Migration</span></figcaption>
-      </figure>
+      <div class="hero-side">
+        <figure class="hero-portrait"><img src="img/nino-hero.webp" width="1194" height="2052" alt="Black and white portrait of Nino Sekeleni, seated in a black jumper and smiling" fetchpriority="high"></figure>
+        <a class="hero-avail" href="mailto:sekelenin@gmail.com?subject=A%20role%20for%20Nino">
+          <span class="k">Johannesburg, South Africa</span>
+          <b>Available for new roles</b>
+          <span class="d">I'm looking for creative director and creative lead roles in any industry, so send me a few details and I'll come back to you.</span>
+          <i aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></i>
+        </a>
+      </div>
     </div>
   </section>
+
+  <div class="clients" aria-label="Brands I have worked with">
+    <div class="track">
+      <ul>
+        <li>Visa</li><li>ICC</li><li>Cricket South Africa</li><li>Lions Cricket</li><li>Deloitte Digital</li><li>Harmony Gold</li><li>Air France</li><li>SuperSport</li><li>Petra Diamonds</li><li>FNB</li><li>JIFA</li><li>Nike</li><li>Puma</li><li>Checkers</li>
+      </ul>
+      <ul aria-hidden="true">
+        <li>Visa</li><li>ICC</li><li>Cricket South Africa</li><li>Lions Cricket</li><li>Deloitte Digital</li><li>Harmony Gold</li><li>Air France</li><li>SuperSport</li><li>Petra Diamonds</li><li>FNB</li><li>JIFA</li><li>Nike</li><li>Puma</li><li>Checkers</li>
+      </ul>
+    </div>
+  </div>
 
   <section class="glance wrap" aria-label="At a glance">
     <div class="glance-grid">
@@ -609,16 +667,6 @@ html:root[data-case]{--ink:var(--case-bg);--ink-2:var(--case-bg2);--on-ink:var(-
     </div>
   </section>
 
-  <div class="clients" aria-label="Brands I have worked with">
-    <div class="track">
-      <ul>
-        <li>Visa</li><li>ICC</li><li>Cricket South Africa</li><li>Lions Cricket</li><li>Deloitte Digital</li><li>Harmony Gold</li><li>Air France</li><li>SuperSport</li><li>Petra Diamonds</li><li>FNB</li><li>JIFA</li><li>Nike</li><li>Puma</li><li>Checkers</li>
-      </ul>
-      <ul aria-hidden="true">
-        <li>Visa</li><li>ICC</li><li>Cricket South Africa</li><li>Lions Cricket</li><li>Deloitte Digital</li><li>Harmony Gold</li><li>Air France</li><li>SuperSport</li><li>Petra Diamonds</li><li>FNB</li><li>JIFA</li><li>Nike</li><li>Puma</li><li>Checkers</li>
-      </ul>
-    </div>
-  </div>
 
   <section class="sec wrap" id="work" aria-labelledby="work-h">
     <div class="sec-head" data-reveal>
@@ -1411,7 +1459,7 @@ html:root[data-case]{--ink:var(--case-bg);--ink-2:var(--case-bg2);--on-ink:var(-
 
   // Count numbers up as they scroll into view
   if(!reduce&&'IntersectionObserver' in window){
-    var nums=[].slice.call(document.querySelectorAll('.results b:not(.txt), .stats b, .proof-grid b')).filter(function(el){
+    var nums=[].slice.call(document.querySelectorAll('.results b:not(.txt), .stats b, .proof-grid b, .hero-stats b')).filter(function(el){
       return /^([R$+]?)([\d,]*\.?\d+)(.*)$/.test(el.textContent.trim())&&el.getBoundingClientRect().top>window.innerHeight;});
     var cio=new IntersectionObserver(function(es){es.forEach(function(e){
       if(!e.isIntersecting)return;cio.unobserve(e.target);
